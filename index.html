@@ -1,44 +1,184 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thuis Fitness Tools</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background: #f5f5f5; }
-        header, footer { background: #333; color: white; padding: 20px 0; text-align: center; }
-        main { padding: 20px; max-width: 900px; margin: auto; background: white; }
-        h1, h2 { color: #222; }
-        article { margin-bottom: 40px; }
-        a { color: #0077cc; text-decoration: none; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thuis Fitness Tools</title>
+  <style>
+    /* Algemeen Styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      margin: 0 10px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
+
+    /* Main content */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    .product-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .product-card {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 30%;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+
+    .product-card h3 {
+      margin: 15px 0;
+      font-size: 1.4rem;
+      color: #333;
+    }
+
+    .product-card p {
+      font-size: 1rem;
+      color: #777;
+    }
+
+    .cta-btn {
+      background-color: #0077cc;
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .cta-btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      .product-card {
+        width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <h1>Thuis Fitness Tools</h1>
-    <p>De beste fitnessapparatuur voor jouw home gym</p>
+  <h1>Thuis Fitness Tools</h1>
+  <p>De beste fitnessapparatuur voor jouw home gym</p>
 </header>
 
-<main>
-    <article>
-        <h2>Top 5 weerstandsbanden voor thuisgebruik</h2>
-        <p>Weerstandsbanden zijn ideaal voor krachttraining en flexibiliteit. Ze zijn goedkoop, compact en effectief. Onze topkeuze: <strong>Fitbands Pro Set</strong> — duurzaam en met verschillende weerstanden. Bekijk op <a href="#">Bol.com</a>.</p>
-    </article>
+<nav>
+  <a href="#producten">Producten</a>
+  <a href="#over-ons">Over Ons</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <article>
-        <h2>De beste verstelbare dumbbells van 2025</h2>
-        <p>Verstelbare dumbbells besparen ruimte én geld. De <strong>FlexBell 24kg Set</strong> is populair vanwege de snelle aanpassing en stevige grip. Meer info op <a href="#">Amazon.nl</a>.</p>
-    </article>
+<div class="container">
+  <section id="producten">
+    <h2>Onze Beste Fitness Tools</h2>
+    <div class="product-section">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300" alt="Weerstandsbanden">
+        <h3>Weerstandsbanden Pro Set</h3>
+        <p>Perfect voor krachttraining en flexibiliteit, geschikt voor alle niveaus.</p>
+        <a href="#" class="cta-btn">Bekijk op Bol.com</a>
+      </div>
 
-    <article>
-        <h2>Fitness apps en accessoires: wat heb je écht nodig?</h2>
-        <p>Niet alles is nodig, maar een goede fitnessmat, hartslagmeter en app (zoals Fitbod of Nike Training Club) maken een groot verschil. Bekijk onze favorieten <a href="#">hier</a>.</p>
-    </article>
-</main>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300" alt="Verstelbare Dumbbells">
+        <h3>Verstelbare Dumbbells FlexBell</h3>
+        <p>Compacte dumbbells voor een complete workout thuis.</p>
+        <a href="#" class="cta-btn">Bekijk op Amazon.nl</a>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300" alt="Fitnessmat">
+        <h3>Yoga & Fitnessmat</h3>
+        <p>Super comfortabele en anti-slip mat voor thuisworkouts.</p>
+        <a href="#" class="cta-btn">Bekijk op Bol.com</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="over-ons">
+    <h2>Over Ons</h2>
+    <p>Wij bieden een uitgebreide selectie van de beste fitnessapparatuur voor thuis. Of je nu net begint met trainen of een ervaren sporter bent, wij helpen je de juiste tools te vinden voor jouw behoeften. Blijf fit, blijf gezond!</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Heb je vragen of wil je meer informatie? Neem gerust contact met ons op!</p>
+  </section>
+</div>
 
 <footer>
-    <p>&copy; 2025 Thuis Fitness Tools. Affiliate disclaimer: Wij ontvangen mogelijk een commissie bij aankopen via onze links.</p>
+  <p>&copy; 2025 Thuis Fitness Tools. Affiliate disclaimer: Wij ontvangen mogelijk een commissie bij aankopen via onze links.</p>
 </footer>
 
 </body>
