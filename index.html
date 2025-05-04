@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>FitVoorThuis – Top beoordeelde fitnessproducten voor thuis</title>
-  <meta name="description" content="Ontdek de best beoordeelde fitnessproducten voor thuisgebruik – geselecteerd op basis van Bol.com reviews. Simpel, transparant en efficiënt." />
+  <title>FitVoorThuis – Top fitnessproducten voor thuisgebruik</title>
+  <meta name="description" content="Bekijk de best beoordeelde fitnessproducten voor thuisgebruik. Geselecteerd op reviews, betrouwbaar en efficiënt." />
   
-  <!-- SEO-Optimalisatie - Social Media Tags -->
-  <meta property="og:title" content="FitVoorThuis – Fitnessproducten voor thuis" />
-  <meta property="og:description" content="Ontdek de beste fitnessproducten voor thuis. Snel gevonden, betrouwbaar beoordeeld." />
-  <meta property="og:image" content="URL_TOT_JE_LOGO_OF_AFBEELDING" />
+  <!-- Open Graph (Social sharing) -->
+  <meta property="og:title" content="FitVoorThuis – Fitness voor thuis" />
+  <meta property="og:description" content="Top beoordeelde fitnessproducten voor thuisgebruik, gebaseerd op Bol.com reviews." />
+  <meta property="og:image" content="topbanner1.png" />
   <meta property="og:url" content="https://www.fitvoorthuis.nl" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
@@ -21,57 +22,91 @@
       background-color: #f9fafb;
       color: #1e293b;
     }
-    .top-banner img {
+
+    .hero {
+      position: relative;
       width: 100%;
-      max-height: 320px;
-      object-fit: cover;
-      display: block;
-      border-bottom: 6px solid #22c55e;
-    }
-    header {
-      background: linear-gradient(to right, #0f172a, #334155);
-      color: #fff;
-      padding: 60px 20px;
+      height: 400px;
+      background-image: url('topbanner1.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-    header h1 {
-      font-size: 2.8rem;
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 12px;
+      color: #fff;
+      max-width: 90%;
+    }
+
+    .hero-overlay h1 {
+      font-size: 2.2rem;
       margin-bottom: 10px;
     }
-    header p {
+
+    .hero-overlay p {
       font-size: 1.1rem;
-      color: #cbd5e1;
+      margin-bottom: 20px;
+      color: #e2e8f0;
     }
+
+    .cta-button {
+      background-color: #22c55e;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #16a34a;
+    }
+
     nav {
       background: #1e293b;
       padding: 10px;
       text-align: center;
     }
+
     nav a {
       color: #e2e8f0;
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
     .section {
       max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
+
     .section h2 {
       font-size: 1.9rem;
       margin-bottom: 20px;
       border-left: 5px solid #22c55e;
       padding-left: 15px;
     }
+
     .product-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 20px;
     }
+
     .product {
       background: white;
       border-radius: 10px;
@@ -81,22 +116,27 @@
       transition: transform 0.3s ease;
       text-align: center;
     }
+
     .product:hover {
       transform: translateY(-4px);
     }
+
     .product img {
       width: 100%;
       border-radius: 10px;
     }
+
     .product h3 {
       font-size: 1.3rem;
       margin-top: 15px;
       color: #1e293b;
     }
+
     .product p {
       font-size: 0.95rem;
       color: #475569;
     }
+
     .cta {
       display: inline-block;
       background-color: #22c55e;
@@ -107,9 +147,11 @@
       margin-top: 12px;
       font-weight: 600;
     }
+
     .cta:hover {
       background-color: #16a34a;
     }
+
     footer {
       background: #1e293b;
       color: #94a3b8;
@@ -117,26 +159,30 @@
       padding: 30px 20px;
       font-size: 0.85rem;
     }
+
     @media (max-width: 768px) {
       .product-grid {
         flex-direction: column;
       }
-      header h1 {
-        font-size: 2rem;
+      .hero {
+        height: 300px;
+        padding: 20px;
+      }
+      .hero-overlay h1 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="top-banner">
-  <img src="topbanner1.png" alt="FitVoorThuis Banner" />
+<div class="hero">
+  <div class="hero-overlay">
+    <h1>Top fitnessproducten voor thuisgebruik</h1>
+    <p>Beoordeeld op Bol.com – betrouwbaar, efficiënt en direct te bestellen</p>
+    <a href="#producten" class="cta-button">Bekijk producten</a>
+  </div>
 </div>
-
-<header>
-  <h1>FitVoorThuis.nl</h1>
-  <p>De slimste weg naar de best beoordeelde fitnessproducten voor thuisgebruik</p>
-</header>
 
 <nav>
   <a href="#producten">Populaire Producten</a>
@@ -170,12 +216,8 @@
 
 <section class="section" id="uitleg">
   <h2>Over FitVoorThuis</h2>
-  <p>
-    <strong>FitVoorThuis.nl</strong> is een onafhankelijk online portaal dat je helpt bij het vinden van de best beoordeelde fitnessproducten voor thuisgebruik. Wij baseren onze keuzes op publieke reviews en populariteit op platforms zoals Bol.com.
-  </p>
-  <p>
-    Wij verkopen niets zelf en geven geen advies. Klik je op een productlink? Dan word je rechtstreeks doorgestuurd naar Bol.com. Bij aankoop ontvangen wij mogelijk een kleine commissie – zonder extra kosten voor jou.
-  </p>
+  <p><strong>FitVoorThuis.nl</strong> is een onafhankelijk online portaal dat je helpt bij het vinden van de best beoordeelde fitnessproducten voor thuisgebruik. Wij baseren onze keuzes op publieke reviews en populariteit op platforms zoals Bol.com.</p>
+  <p>Wij verkopen niets zelf en geven geen advies. Klik je op een productlink? Dan word je rechtstreeks doorgestuurd naar Bol.com. Bij aankoop ontvangen wij mogelijk een kleine commissie – zonder extra kosten voor jou.</p>
 </section>
 
 <section class="section" id="contact">
