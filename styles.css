@@ -1,3 +1,7 @@
+/* ============================================
+   styles.css - Volledige aangepaste stylesheet
+   ============================================ */
+
 :root {
   /* Thema-kleuren */
   --bg: #f9fafb;
@@ -11,19 +15,58 @@
   --fg: #eee;
 }
 
-/* Algemeen stijlen voor de hele site */
+/* ============================================
+   Reset & basiselementen
+   ============================================ */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
+html, body {
+  width: 100%;
+  height: 100%;
   background: var(--bg);
   color: var(--fg);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
 }
 
-/* Hero sectie (Bovenaan de pagina) */
+a {
+  color: var(--cta);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Navigatie & Header
+   ============================================ */
+header {
+  background: var(--bg);
+  padding: 1rem 2rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  font-weight: 500;
+}
+
+/* ============================================
+   Hero-sectie
+   ============================================ */
 .hero {
   background-image: url('hero.jpg');
   background-size: cover;
@@ -37,10 +80,11 @@ body {
 }
 
 .hero-overlay {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.7);
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
+  max-width: 600px;
 }
 
 .hero-overlay h1 {
@@ -51,92 +95,158 @@ body {
 
 .hero-overlay p {
   font-size: 1.25rem;
-  color: var(--fg);
   margin-bottom: 1.5rem;
 }
 
-/* Layout voor product grid */
+/* ============================================
+   Secties & titels
+   ============================================ */
+.section, section {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-title p {
+  font-size: 1rem;
+  color: var(--fg);
+}
+
+/* ============================================
+   Product-grid
+   ============================================ */
 .product-grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* Kaart-stijl voor producten */
 .product-card {
   background: #fff;
   border-radius: 0.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+
+.product-card p {
+  flex-grow: 1;
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+.product-card .button-cta {
+  margin: 1rem;
+}
+
+/* ============================================
+   Artikelen-grid
+   ============================================ */
+.article-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.article-card {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.dark .product-card {
-  background: #2a2a2a;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+.article-card img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* CTA-knop styling */
-.button-cta {
-  background: var(--cta);
-  color: #fff;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
+.article-card h3 {
+  font-size: 1.25rem;
+  margin: 1rem;
+}
+
+.article-card p {
+  flex-grow: 1;
+  margin: 0 1rem 1rem;
+  font-size: 0.95rem;
+}
+
+.article-card .button-cta {
+  margin: 1rem;
+}
+
+/* ============================================
+   Footer
+   ============================================ */
+footer {
+  background: var(--bg);
+  color: var(--fg);
   text-align: center;
-  text-decoration: none;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+  border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-.button-cta:hover {
-  opacity: 0.9;
-}
-
-/* Afbeeldingen */
+/* ============================================
+   Afbeeldingen & Lazy Load
+   ============================================ */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Navigatie */
-nav a {
-  margin: 0 1rem;
-  color: var(--fg);
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.875rem;
-  background: var(--bg);
-  color: var(--fg);
-}
-
-/* Responsive aanpassingen */
-@media (max-width: 768px) {
-  .hero {
-    height: 300px;
-    padding: 20px;
-  }
-  .hero-overlay h1 {
-    font-size: 1.5rem;
-  }
-}
-
-/* Fallback voor dark-mode via systeeminstelling */
+/* ============================================
+   Dark-mode fallback via systeem
+   ============================================ */
 @media (prefers-color-scheme: dark) {
   :root:not(.dark) {
     --bg: #1e1e1e;
     --fg: #eee;
+  }
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+  .hero {
+    height: 300px;
+  }
+  .hero-overlay h1 {
+    font-size: 1.75rem;
+  }
+  .section-title h2 {
+    font-size: 2rem;
   }
 }
