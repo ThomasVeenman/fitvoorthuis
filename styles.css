@@ -12,7 +12,7 @@ body {
 
 /* Hero sectie (Bovenaan de pagina) */
 .hero {
-  background-image: url('hero-afbeelding.jpg'); /* Gebruik je eigen afbeelding */
+  background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
   color: white;
