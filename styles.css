@@ -12,50 +12,35 @@ body {
 
 /* Hero sectie (Bovenaan de pagina) */
 .hero {
-  position: relative;
-  width: 100%;
-  height: 400px; /* Hoogte voor de homepage */
-  background-image: url('topbanner1.png');
+  background-image: url('hero-afbeelding.jpg'); /* Gebruik je eigen afbeelding */
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  color: white;
+  padding: 60px 20px;
   text-align: center;
 }
 
-.hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 30px;
-  border-radius: 12px;
-  color: #fff;
-  max-width: 90%;
-}
-
-.hero-overlay h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.hero-overlay p {
-  font-size: 1.1rem;
+.hero h1 {
+  font-size: 3rem;
   margin-bottom: 20px;
-  color: #e2e8f0;
 }
 
-.cta-button {
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero .cta-button {
   background-color: #22c55e;
   color: white;
-  padding: 12px 20px;
-  border: none;
+  padding: 15px 30px;
   border-radius: 6px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
+.hero .cta-button:hover {
   background-color: #16a34a;
 }
 
