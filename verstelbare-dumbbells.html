@@ -1,146 +1,170 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Top 5 Verstelbare Dumbbells voor Thuisfitness</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verstelbare Dumbbells – FitVoorThuis</title>
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-      color: #333;
+    .dropdown {
+      position: relative;
     }
 
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 2rem;
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 250px;
+      z-index: 1000;
+      flex-direction: column;
+      padding: 0.5rem 0;
     }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      text-align: center;
-      color: #1a1a1a;
-    }
-
-    .product {
-      background: #fff;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: all 0.3s ease;
-    }
-
-    .product:hover {
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    }
-
-    .product h2 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: #004080;
-    }
-
-    .product ul {
-      padding-left: 1rem;
-      list-style-type: disc;
-      margin-bottom: 1rem;
-    }
-
-    .product p {
-      margin: 0.25rem 0;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.6rem 1.2rem;
-      background-color: #007BFF;
+    .dropdown-content a {
       color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s ease;
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+      text-transform: none;
     }
 
-    .btn:hover {
-      background-color: #0056b3;
+    .dropdown:hover .dropdown-content {
+      display: flex;
     }
 
-    @media (max-width: 600px) {
-      .container {
-        padding: 1rem;
-      }
+    .exercise-list {
+      margin-top: 2rem;
+    }
 
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .product h2 {
-        font-size: 1rem;
-      }
+    .exercise-list li {
+      margin: 0.5rem 0;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <h1>Top 5 Verstelbare Dumbbells voor Thuisfitness</h1>
-
-    <div class="product">
-      <h2>1. Tunturi Selector Dumbbell 25kg</h2>
-      <ul>
-        <li><strong>Gewichtbereik:</strong> 2,5 – 25 kg</li>
-        <li><strong>Waarom kiezen?</strong> Ideaal voor beginners tot gevorderden, eenvoudig systeem om gewicht aan te passen.</li>
-      </ul>
-      <p><strong>Te koop bij:</strong> Bol.com</p>
-      <a href="#" class="btn">Bekijk of bestel bij Bol.com</a>
+  <!-- Hero sectie -->
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>Verstelbare Dumbbells</h1>
+      <p>De topkeuze voor ruimtebesparende en effectieve krachttraining thuis.</p>
     </div>
-
-    <div class="product">
-      <h2>2. Bowflex SelectTech 552i</h2>
-      <ul>
-        <li><strong>Gewichtbereik:</strong> 2 – 24 kg</li>
-        <li><strong>Waarom kiezen?</strong> Professioneel model met geavanceerd instelsysteem.</li>
-      </ul>
-      <p><strong>Te koop bij:</strong> Amazon.nl</p>
-      <a href="#" class="btn">Bekijk of bestel bij Amazon.nl</a>
-    </div>
-
-    <div class="product">
-      <h2>3. ProForm 50 kg Set</h2>
-      <ul>
-        <li><strong>Gewichtbereik:</strong> 5 – 50 kg</li>
-        <li><strong>Waarom kiezen?</strong> Breed gewichtsbereik voor serieuze krachttrainers.</li>
-      </ul>
-      <p><strong>Te koop bij:</strong> Fitnessdigital.nl</p>
-      <a href="#" class="btn">Bekijk of bestel bij Fitnessdigital.nl</a>
-    </div>
-
-    <div class="product">
-      <h2>4. PowerBlock Elite Dumbbell Set</h2>
-      <ul>
-        <li><strong>Gewichtbereik:</strong> 2 – 24 kg</li>
-        <li><strong>Waarom kiezen?</strong> Stevig design, snel wisselen tussen gewichten.</li>
-      </ul>
-      <p><strong>Te koop bij:</strong> Fitwinkel.nl</p>
-      <a href="#" class="btn">Bekijk of bestel bij Fitwinkel.nl</a>
-    </div>
-
-    <div class="product">
-      <h2>5. Opti Verstelbare Dumbbell Set</h2>
-      <ul>
-        <li><strong>Gewichtbereik:</strong> 2 – 24 kg</li>
-        <li><strong>Waarom kiezen?</strong> Budgetoptie met goede reviews voor starters.</li>
-      </ul>
-      <p><strong>Te koop bij:</strong> Coolblue.nl</p>
-      <a href="#" class="btn">Bekijk of bestel bij Coolblue.nl</a>
-    </div>
-
   </div>
+
+  <!-- Navigatie -->
+  <nav>
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+      <a href="#">Producten ▾</a>
+      <div class="dropdown-content">
+        <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
+        <a href="weerstandsbanden.html">Weerstandsbanden</a>
+        <a href="kettlebells.html">Kettlebells</a>
+        <a href="loopbanden.html">Loopbanden</a>
+        <a href="crosstrainers.html">Crosstrainers</a>
+        <a href="hometrainers.html">Hometrainers</a>
+        <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
+        <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+        <a href="pullup-bars.html">Pull-up Bars</a>
+        <a href="foamrollers-massageguns.html">Foam Rollers / Massage Guns</a>
+        <a href="yogamatten.html">Yogamatten</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Oefeningen ▾</a>
+      <div class="dropdown-content">
+        <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
+        <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
+        <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
+        <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+        <a href="oefeningen-core.html">Core & Stabiliteit</a>
+        <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+        <a href="oefeningen-yoga.html">Yoga & Stretching</a>
+      </div>
+    </div>
+
+    <a href="index.html#artikelen">Artikelen</a>
+    <a href="index.html#uitleg">Over ons</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+  <!-- Productcategorie sectie -->
+  <section class="section">
+    <div class="section-title">
+      <h2>Top 5 Verstelbare Dumbbells</h2>
+      <p>Onze selectie is gebaseerd op gebruiksgemak, betrouwbaarheid en klantbeoordelingen.</p>
+    </div>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <h3>1. Tunturi Selector Dumbbell 25kg</h3>
+        <p><strong>Gewichtbereik:</strong> 2,5 – 25 kg</p>
+        <p><strong>Waarom kiezen?</strong> Eenvoudig systeem, geschikt voor beginners tot gevorderden.</p>
+        <p><strong>Te koop bij:</strong> Bol.com</p>
+        <a href="#" class="cta-button">Bekijk of bestel bij Bol.com</a>
+      </div>
+
+      <div class="product-card">
+        <h3>2. Bowflex SelectTech 552i</h3>
+        <p><strong>Gewichtbereik:</strong> 2 – 24 kg</p>
+        <p><strong>Waarom kiezen?</strong> Professioneel systeem, snel verstelbaar.</p>
+        <p><strong>Te koop bij:</strong> Amazon.nl</p>
+        <a href="#" class="cta-button">Bekijk of bestel bij Amazon.nl</a>
+      </div>
+
+      <div class="product-card">
+        <h3>3. ProForm 50 kg Set</h3>
+        <p><strong>Gewichtbereik:</strong> 5 – 50 kg</p>
+        <p><strong>Waarom kiezen?</strong> Breed bereik, ideaal voor serieuze krachttrainers.</p>
+        <p><strong>Te koop bij:</strong> Fitnessdigital.nl</p>
+        <a href="#" class="cta-button">Bekijk of bestel bij Fitnessdigital.nl</a>
+      </div>
+
+      <div class="product-card">
+        <h3>4. PowerBlock Elite Set</h3>
+        <p><strong>Gewichtbereik:</strong> 2 – 24 kg</p>
+        <p><strong>Waarom kiezen?</strong> Compact design, zeer degelijk.</p>
+        <p><strong>Te koop bij:</strong> Fitwinkel.nl</p>
+        <a href="#" class="cta-button">Bekijk of bestel bij Fitwinkel.nl</a>
+      </div>
+
+      <div class="product-card">
+        <h3>5. Opti Verstelbare Dumbbell Set</h3>
+        <p><strong>Gewichtbereik:</strong> 2 – 24 kg</p>
+        <p><strong>Waarom kiezen?</strong> Budgetvriendelijk, goede instapoptie.</p>
+        <p><strong>Te koop bij:</strong> Coolblue.nl</p>
+        <a href="#" class="cta-button">Bekijk of bestel bij Coolblue.nl</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Oefeningen sectie -->
+  <section class="section">
+    <div class="section-title">
+      <h2>Top 10 Oefeningen met Dumbbells</h2>
+      <p>Gebruik deze oefeningen om jouw kracht, coördinatie en mobiliteit te verbeteren.</p>
+    </div>
+
+    <ul class="exercise-list">
+      <li>1. Dumbbell Bench Press</li>
+      <li>2. Goblet Squat</li>
+      <li>3. Shoulder Press</li>
+      <li>4. Bicep Curls</li>
+      <li>5. Tricep Kickbacks</li>
+      <li>6. Lunges met Dumbbells</li>
+      <li>7. Dumbbell Deadlift</li>
+      <li>8. Dumbbell Rows</li>
+      <li>9. Arnold Press</li>
+      <li>10. Renegade Rows</li>
+    </ul>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 FitVoorThuis.nl – Alle rechten voorbehouden.</p>
+    <p><em>Disclaimer:</em> Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
+  </footer>
+
 </body>
 </html>
