@@ -1,23 +1,15 @@
-/* ============================================
-   styles.css - Volledige aangepaste stylesheet
-   ============================================ */
-
 :root {
-  /* Thema-kleuren */
   --bg: #f9fafb;
   --fg: #1e293b;
   --cta: #22c55e;
 }
 
-/* Dark-mode klasse voor toggle */
 .dark {
   --bg: #1e1e1e;
   --fg: #eee;
 }
 
-/* ============================================
-   Reset & basiselementen
-   ============================================ */
+/* Reset & basis */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,31 +34,27 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ============================================
-   Navigatie & Header
-   ============================================ */
-header {
-  background: var(--bg);
-  padding: 1rem 2rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
+/* Navigatiebalk */
 nav {
+  background-color: #000;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
 }
 
 nav a {
+  color: #fff;
   font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
 }
 
-/* ============================================
-   Hero-sectie
-   ============================================ */
+nav a:hover {
+  color: var(--cta);
+}
+
+/* Hero */
 .hero {
   background-image: url('hero.jpg');
   background-size: cover;
@@ -80,7 +68,7 @@ nav a {
 }
 
 .hero-overlay {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.6);
   padding: 2rem;
   border-radius: 0.5rem;
   text-align: center;
@@ -89,18 +77,36 @@ nav a {
 
 .hero-overlay h1 {
   font-size: 3rem;
-  color: var(--fg);
+  color: #fff;
   margin-bottom: 0.5rem;
 }
 
 .hero-overlay p {
   font-size: 1.25rem;
+  color: #fff;
   margin-bottom: 1.5rem;
 }
 
-/* ============================================
-   Secties & titels
-   ============================================ */
+/* Call-to-action button */
+.cta-button {
+  background-color: var(--cta);
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  transition: opacity 0.2s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  opacity: 0.9;
+}
+
+/* Secties & titels */
 .section, section {
   padding: 4rem 2rem;
   max-width: 1200px;
@@ -122,9 +128,7 @@ nav a {
   color: var(--fg);
 }
 
-/* ============================================
-   Product-grid
-   ============================================ */
+/* Producten */
 .product-grid {
   display: grid;
   gap: 2rem;
@@ -162,13 +166,11 @@ nav a {
   font-size: 0.95rem;
 }
 
-.product-card .button-cta {
+.product-card .cta-button {
   margin: 1rem;
 }
 
-/* ============================================
-   Artikelen-grid
-   ============================================ */
+/* Artikelen */
 .article-grid {
   display: grid;
   gap: 2rem;
@@ -201,13 +203,11 @@ nav a {
   font-size: 0.95rem;
 }
 
-.article-card .button-cta {
+.article-card .cta-button {
   margin: 1rem;
 }
 
-/* ============================================
-   Footer
-   ============================================ */
+/* Footer */
 footer {
   background: var(--bg);
   color: var(--fg);
@@ -217,35 +217,16 @@ footer {
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-/* ============================================
-   Afbeeldingen & Lazy Load
-   ============================================ */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ============================================
-   Dark-mode fallback via systeem
-   ============================================ */
-@media (prefers-color-scheme: dark) {
-  :root:not(.dark) {
-    --bg: #1e1e1e;
-    --fg: #eee;
-  }
-}
-
-/* ============================================
-   Responsive
-   ============================================ */
+/* Responsiveness */
 @media (max-width: 768px) {
   .hero {
     height: 300px;
   }
+
   .hero-overlay h1 {
     font-size: 1.75rem;
   }
+
   .section-title h2 {
     font-size: 2rem;
   }
