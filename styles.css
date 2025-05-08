@@ -73,8 +73,10 @@ nav a.active {
   border-bottom: 2px solid var(--cta);
 }
 
+/* =========================================
+  Dropdown menu 
+   ========================================= */
 
-/* Dropdown menu (toevoegen aan styles.css) */
 .dropdown {
   position: relative;
 }
