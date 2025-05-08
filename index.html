@@ -6,215 +6,137 @@
   <title>FitVoorThuis – Top fitnessproducten voor thuisgebruik</title>
   <meta name="description" content="Bekijk de best beoordeelde fitnessproducten voor thuisgebruik. Geselecteerd op reviews, betrouwbaar en efficiënt." />
 
-  <!-- Open Graph (Social sharing) -->
+  <!-- Open Graph -->
   <meta property="og:title" content="FitVoorThuis – Fitness voor thuis" />
   <meta property="og:description" content="Top beoordeelde fitnessproducten voor thuisgebruik, gebaseerd op Bol.com reviews." />
   <meta property="og:image" content="hero.jpg" />
   <meta property="og:url" content="https://www.fitvoorthuis.nl" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- 1. Inline Critical CSS voor hero-sectie + variabelen -->
-  <style>
-    /* Light mode variabelen */
-    :root {
-      --bg: #f8f9fa;
-      --fg: #111;
-      --cta: #22c55e;
-    }
-    /* Dark-mode klasse (voor toggle) */
-    .dark {
-      --bg: #1e1e1e;
-      --fg: #eee;
-    }
-    /* Hero-sectie */
-    .hero {
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 80vh;
-      margin: 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-overlay {
-      background: rgba(255,255,255,0.6);
-      padding: 2rem;
-      border-radius: 0.5rem;
-    }
-    .hero h1, .hero-overlay h1 {
-      font-size: 3rem;
-      color: var(--fg);
-      margin-bottom: 0.5rem;
-    }
-    .hero p, .hero-overlay p {
-      font-size: 1.25rem;
-      color: var(--fg);
-      margin-bottom: 1.5rem;
-    }
-    .button-cta {
-      background: var(--cta);
-      color: #fff;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: opacity 0.2s ease;
-    }
-    .button-cta:hover {
-      opacity: 0.9;
-    }
-  </style>
-
-  <!-- 2. Externe CSS asynchroon laden -->
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+  <!-- Stijlen -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- 3. Dark mode toggle button -->
-  <button id="theme-toggle" aria-label="Toggle dark mode"
-          style="position:fixed; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;">
-    🌓
-  </button>
 
-  <!-- 4. Hero-sectie (oorspronkelijke structuur, maar gestyled via inline CSS) -->
+  <!-- Hero sectie -->
   <div class="hero">
-    <img src="hero.jpg" alt="Home gym" style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover;" loading="lazy">
     <div class="hero-overlay">
       <h1>Welkom bij FitVoorThuis</h1>
       <p>Ontdek de beste fitnessproducten en artikelen voor jouw thuisgym.</p>
-      <a href="#artikelen" class="button-cta">Bekijk de beste fitnessproducten</a>
+      <a href="#artikelen" class="cta-button">Bekijk de beste fitnessproducten</a>
     </div>
   </div>
 
-  <!-- 5. Navigatie -->
+  <!-- Navigatie -->
   <nav>
     <a href="#producten">Populaire Producten</a>
     <a href="#uitleg">Over Ons</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- 6. Populaire producten sectie -->
+  <!-- Populaire Producten -->
   <section id="popular-products">
     <div class="section-title">
       <h2>Populaire Fitnessproducten voor Thuis</h2>
       <p>Bekijk onze aanbevolen fitnessproducten die perfect zijn voor jouw thuisgym!</p>
     </div>
+    
     <div class="product-grid">
       <div class="product-card">
-        <img src="path_to_image/verstelbare_dumbbells.jpg" alt="Verstelbare Dumbbells" loading="lazy">
+        <img src="path_to_image/verstelbare_dumbbells.jpg" alt="Verstelbare Dumbbells">
         <h3>Verstelbare Dumbbells</h3>
         <p>De ideale keuze voor krachttraining thuis. Bespaar ruimte met verstelbare gewichten.</p>
-        <a href="affiliate-link-voor-verstelbare-dumbbells" class="button-cta">Bekijk het product</a>
+        <a href="affiliate-link-voor-verstelbare-dumbbells" class="cta-button">Bekijk het product</a>
       </div>
       <div class="product-card">
-        <img src="path_to_image/hometrainer.jpg" alt="Hometrainer" loading="lazy">
+        <img src="path_to_image/hometrainer.jpg" alt="Hometrainer">
         <h3>Hometrainer</h3>
         <p>Versterk je hart en verbrand calorieën met een magnetische hometrainer.</p>
-        <a href="affiliate-link-voor-hometrainer" class="button-cta">Bekijk het product</a>
+        <a href="affiliate-link-voor-hometrainer" class="cta-button">Bekijk het product</a>
       </div>
       <div class="product-card">
-        <img src="path_to_image/weerstandsbanden.jpg" alt="Weerstandsbanden" loading="lazy">
+        <img src="path_to_image/weerstandsbanden.jpg" alt="Weerstandsbanden">
         <h3>Weerstandsbanden</h3>
         <p>Veelzijdig en betaalbaar. Perfect voor kracht- en flexibiliteitstraining.</p>
-        <a href="affiliate-link-voor-weerstandsbanden" class="button-cta">Bekijk het product</a>
+        <a href="affiliate-link-voor-weerstandsbanden" class="cta-button">Bekijk het product</a>
       </div>
       <div class="product-card">
-        <img src="path_to_image/roeimachine.jpg" alt="Roeimachine" loading="lazy">
+        <img src="path_to_image/roeimachine.jpg" alt="Roeimachine">
         <h3>Roeimachine</h3>
         <p>Train je volledige lichaam met een roeimachine.</p>
-        <a href="affiliate-link-voor-roeimachine" class="button-cta">Bekijk het product</a>
+        <a href="affiliate-link-voor-roeimachine" class="cta-button">Bekijk het product</a>
       </div>
       <div class="product-card">
-        <img src="path_to_image/kettlebells.jpg" alt="Kettlebells" loading="lazy">
+        <img src="path_to_image/kettlebells.jpg" alt="Kettlebells">
         <h3>Kettlebells</h3>
         <p>Verbeter je kracht en explosiviteit met kettlebells.</p>
-        <a href="affiliate-link-voor-kettlebells" class="button-cta">Bekijk het product</a>
+        <a href="affiliate-link-voor-kettlebells" class="cta-button">Bekijk het product</a>
       </div>
       <div class="product-card">
-        <img src="path_to_image/yoga-mat.jpg" alt="Yoga Mat" loading="lazy">
+        <img src="path_to_image/yoga-mat.jpg" alt="Yoga Mat">
         <h3>Yoga Mat</h3>
         <p>Perfect voor yoga, pilates, en stretching.</p>
-        <a href="affiliate-link-voor-yoga-mat" class="button-cta">Bekijk het product</a>
+        <a href="affiliate-link-voor-yoga-mat" class="cta-button">Bekijk het product</a>
       </div>
     </div>
   </section>
 
-  <!-- 7. Artikelen sectie -->
+  <!-- Artikelen -->
   <section class="section" id="artikelen">
     <h2>Onze Geschreven Artikelen</h2>
     <p>Bekijk onze uitgebreide gidsen en artikelen over fitness voor thuisgebruik.</p>
     <div class="article-grid">
       <div class="article-card">
-        <img src="images/foto-van-artikel1.jpg" alt="Artikel 1" loading="lazy">
+        <img src="images/foto-van-artikel1.jpg" alt="Artikel 1" />
         <h3><a href="artikel1.html">De 5 Beste Fitnessapparaten voor Thuis in 2025 (Getest)</a></h3>
         <p>Lees alles over de top fitnessapparaten voor 2025, getest en beoordeeld door experts.</p>
-        <a href="artikel1.html" class="button-cta">Lees verder</a>
+        <a href="artikel1.html" class="cta-button">Lees verder</a>
       </div>
       <div class="article-card">
-        <img src="images/foto-van-artikel2.jpg" alt="Artikel 2" loading="lazy">
+        <img src="images/foto-van-artikel2.jpg" alt="Artikel 2" />
         <h3><a href="artikel2.html">Fit in 30 minuten: Een snelle workout voor drukke mensen</a></h3>
         <p>Geen tijd om naar de sportschool te gaan? Probeer deze 30-minuten workout!</p>
-        <a href="artikel2.html" class="button-cta">Lees verder</a>
+        <a href="artikel2.html" class="cta-button">Lees verder</a>
       </div>
       <div class="article-card">
-        <img src="images/foto-van-artikel3.jpg" alt="Artikel 3" loading="lazy">
+        <img src="images/foto-van-artikel3.jpg" alt="Artikel 3" />
         <h3><a href="artikel3.html">Verstelbare Dumbbells vs. Kettlebells: Wat is beter voor jou?</a></h3>
         <p>Vergelijk de voordelen van verstelbare dumbbells en kettlebells.</p>
-        <a href="artikel3.html" class="button-cta">Lees verder</a>
+        <a href="artikel3.html" class="cta-button">Lees verder</a>
       </div>
       <div class="article-card">
-        <img src="image-4.jpg" alt="Artikel 4" loading="lazy">
+        <img src="image-4.jpg" alt="Artikel 4" />
         <h3><a href="artikel4.html">Hoe richt je een thuisgym in met een klein budget?</a></h3>
         <p>Ontdek hoe je een efficiënte thuisgym kunt opzetten zonder je bankrekening te plunderen.</p>
-        <a href="artikel4.html" class="button-cta">Lees verder</a>
+        <a href="artikel4.html" class="cta-button">Lees verder</a>
       </div>
       <div class="article-card">
-        <img src="image-5.jpg" alt="Artikel 5" loading="lazy">
+        <img src="image-5.jpg" alt="Artikel 5" />
         <h3><a href="artikel5.html">Waarom thuis trainen populairder is dan ooit</a></h3>
         <p>De verschuiving naar thuisfitness en hoe jij kunt profiteren van de trend.</p>
-        <a href="artikel5.html" class="button-cta">Lees verder</a>
+        <a href="artikel5.html" class="cta-button">Lees verder</a>
       </div>
     </div>
   </section>
 
-  <!-- 8. Over ons -->
+  <!-- Over ons -->
   <section class="section" id="uitleg">
     <h2>Over FitVoorThuis</h2>
     <p><strong>FitVoorThuis.nl</strong> is een onafhankelijk online platform dat de beste fitnessproducten voor thuisgebruik selecteert op basis van reviews en populariteit.</p>
     <p>Wij verkopen niets zelf en geven geen advies. Klik je op een affiliate-link, dan kan dit een kleine commissie opleveren zonder extra kosten voor jou.</p>
   </section>
 
-  <!-- 9. Contact -->
+  <!-- Contact -->
   <section class="section" id="contact">
     <h2>Contact</h2>
     <p>Mail ons via <a href="mailto:info@fitvoorthuis.nl">info@fitvoorthuis.nl</a> voor tips, vragen of suggesties.</p>
   </section>
 
-  <!-- 10. Footer -->
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 FitVoorThuis.nl – Alle rechten voorbehouden.</p>
     <p><em>Disclaimer:</em> Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
   </footer>
-
-  <!-- 11. JS voor dark-mode toggle -->
-  <script>
-    (function() {
-      const btn = document.getElementById('theme-toggle');
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.classList.add('dark');
-      }
-      btn.addEventListener('click', () => {
-        document.documentElement.classList.toggle('dark');
-        const mode = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-        localStorage.setItem('theme', mode);
-      });
-    })();
-  </script>
 
 </body>
 </html>
