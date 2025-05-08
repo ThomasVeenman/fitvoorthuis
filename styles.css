@@ -73,6 +73,34 @@ nav a.active {
   border-bottom: 2px solid var(--cta);
 }
 
+
+/* Dropdown menu (toevoegen aan styles.css) */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  min-width: 250px;
+  z-index: 1000;
+  flex-direction: column;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  text-transform: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+
 /* =========================================
    Hero-sectie
    ========================================= */
