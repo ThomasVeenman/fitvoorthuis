@@ -1,15 +1,21 @@
+/* ===============================
+   Algemene kleurvariabelen (thema)
+   =============================== */
 :root {
-  --bg: #f9fafb;
-  --fg: #1e293b;
-  --cta: #22c55e;
+  --bg: #f9fafb;         /* Achtergrondkleur (licht thema) */
+  --fg: #1e293b;         /* Tekstkleur (licht thema) */
+  --cta: #22c55e;        /* Groen voor knoppen en accenten */
 }
 
+/* Donkere modus variabelen */
 .dark {
   --bg: #1e1e1e;
   --fg: #eee;
 }
 
-/* Reset & basis */
+/* ===============================
+   Reset en basisinstellingen
+   =============================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +31,9 @@ html, body {
   line-height: 1.6;
 }
 
+/* ===============================
+   Algemene linkstijl
+   =============================== */
 a {
   color: var(--cta);
   text-decoration: none;
@@ -34,63 +43,73 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Navigatiebalk */
+/* ===============================
+   Navigatiebalk bovenaan
+   =============================== */
 nav {
-  background-color: #000;
-  padding: 1rem 2rem;
+  background-color: #000;              /* Zwarte achtergrond */
+  padding: 0.75rem 1.5rem;             /* Minder hoog dan origineel */
   display: flex;
   justify-content: center;
   gap: 2rem;
+  position: sticky;                    /* Vast bovenaan bij scrollen */
+  top: 0;
+  z-index: 1000;
 }
 
 nav a {
-  color: #fff;
+  color: #fff;                         /* Witte links */
   font-weight: 500;
   text-transform: uppercase;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--cta);
+  color: var(--cta);                   /* Groen bij hover */
 }
 
-/* Hero */
+/* ===============================
+   Hero-afbeelding sectie (bovenaan)
+   =============================== */
 .hero {
   background-image: url('hero.jpg');
   background-size: cover;
   background-position: center;
+  height: 50vh;                        /* Compacter dan originele 80vh */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
   position: relative;
   overflow: hidden;
 }
 
+/* Overlay tekstblok over hero-afbeelding */
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 2rem;
+  background: rgba(0, 0, 0, 0.6);      /* Donkere transparante achtergrond */
+  padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   text-align: center;
   max-width: 600px;
 }
 
 .hero-overlay h1 {
-  font-size: 3rem;
+  font-size: 2.25rem;
   color: #fff;
   margin-bottom: 0.5rem;
 }
 
 .hero-overlay p {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-/* Call-to-action button */
+/* ===============================
+   Call-to-action knop (groen met witte tekst)
+   =============================== */
 .cta-button {
-  background-color: var(--cta);
-  color: #fff;
+  background-color: var(--cta);       /* Groen */
+  color: #fff;                        /* Witte tekst */
   padding: 1rem 2rem;
   font-size: 1rem;
   border: none;
@@ -106,13 +125,16 @@ nav a:hover {
   opacity: 0.9;
 }
 
-/* Secties & titels */
+/* ===============================
+   Algemene sectieopmaak
+   =============================== */
 .section, section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Titelblokken voor secties */
 .section-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -128,7 +150,9 @@ nav a:hover {
   color: var(--fg);
 }
 
-/* Producten */
+/* ===============================
+   Producten overzicht (grid)
+   =============================== */
 .product-grid {
   display: grid;
   gap: 2rem;
@@ -170,7 +194,9 @@ nav a:hover {
   margin: 1rem;
 }
 
-/* Artikelen */
+/* ===============================
+   Artikelen overzicht (grid)
+   =============================== */
 .article-grid {
   display: grid;
   gap: 2rem;
@@ -207,7 +233,9 @@ nav a:hover {
   margin: 1rem;
 }
 
-/* Footer */
+/* ===============================
+   Footer
+   =============================== */
 footer {
   background: var(--bg);
   color: var(--fg);
@@ -217,14 +245,20 @@ footer {
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-/* Responsiveness */
+/* ===============================
+   Responsieve aanpassingen (mobiel)
+   =============================== */
 @media (max-width: 768px) {
   .hero {
-    height: 300px;
+    height: 35vh;                      /* Nog compacter op mobiel */
   }
 
   .hero-overlay h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
   }
 
   .section-title h2 {
