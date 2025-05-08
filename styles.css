@@ -1,21 +1,20 @@
-/* ===============================
-   Algemene kleurvariabelen (thema)
-   =============================== */
+/* =========================================
+   Thema-variabelen en kleuren
+   ========================================= */
 :root {
   --bg: #f9fafb;         /* Achtergrondkleur (licht thema) */
-  --fg: #1e293b;         /* Tekstkleur (licht thema) */
-  --cta: #22c55e;        /* Groen voor knoppen en accenten */
+  --fg: #1e293b;         /* Tekstkleur */
+  --cta: #22c55e;        /* Primair groen (call-to-action) */
 }
 
-/* Donkere modus variabelen */
 .dark {
   --bg: #1e1e1e;
   --fg: #eee;
 }
 
-/* ===============================
-   Reset en basisinstellingen
-   =============================== */
+/* =========================================
+   Basisopmaak en reset
+   ========================================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,11 +28,12 @@ html, body {
   color: var(--fg);
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
-/* ===============================
-   Algemene linkstijl
-   =============================== */
+/* =========================================
+   Links algemeen
+   ========================================= */
 a {
   color: var(--cta);
   text-decoration: none;
@@ -43,39 +43,44 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===============================
+/* =========================================
    Navigatiebalk bovenaan
-   =============================== */
+   ========================================= */
 nav {
-  background-color: #000;              /* Zwarte achtergrond */
-  padding: 0.75rem 1.5rem;             /* Minder hoog dan origineel */
+  background-color: #000;
+  padding: 0.75rem 1.5rem;
   display: flex;
   justify-content: center;
   gap: 2rem;
-  position: sticky;                    /* Vast bovenaan bij scrollen */
+  position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 nav a {
-  color: #fff;                         /* Witte links */
+  color: #fff;
   font-weight: 500;
   text-transform: uppercase;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 nav a:hover {
-  color: var(--cta);                   /* Groen bij hover */
+  color: var(--cta);
 }
 
-/* ===============================
-   Hero-afbeelding sectie (bovenaan)
-   =============================== */
+nav a.active {
+  color: var(--cta);
+  border-bottom: 2px solid var(--cta);
+}
+
+/* =========================================
+   Hero-sectie
+   ========================================= */
 .hero {
   background-image: url('hero.jpg');
   background-size: cover;
   background-position: center;
-  height: 50vh;                        /* Compacter dan originele 80vh */
+  height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,33 +88,36 @@ nav a:hover {
   overflow: hidden;
 }
 
-/* Overlay tekstblok over hero-afbeelding */
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.6);      /* Donkere transparante achtergrond */
+  background: rgba(0, 0, 0, 0.6);
   padding: 1.5rem 2rem;
   border-radius: 0.5rem;
   text-align: center;
   max-width: 600px;
 }
 
+.hero-overlay h1,
+.hero-overlay p {
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
 .hero-overlay h1 {
   font-size: 2.25rem;
-  color: #fff;
   margin-bottom: 0.5rem;
 }
 
 .hero-overlay p {
   font-size: 1.125rem;
-  color: #fff;
   margin-bottom: 1rem;
 }
 
-/* ===============================
-   Call-to-action knop (groen met witte tekst)
-   =============================== */
+/* =========================================
+   Call-to-action knop
+   ========================================= */
 .cta-button {
-  background-color: var(--cta);       /* Groen */
-  color: #fff;                        /* Witte tekst */
+  background-color: var(--cta);
+  color: #fff;
   padding: 1rem 2rem;
   font-size: 1rem;
   border: none;
@@ -117,24 +125,26 @@ nav a:hover {
   cursor: pointer;
   text-align: center;
   display: inline-block;
-  transition: opacity 0.2s ease;
+  transition: all 0.2s ease;
   text-decoration: none;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .cta-button:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* ===============================
-   Algemene sectieopmaak
-   =============================== */
+/* =========================================
+   Secties algemeen
+   ========================================= */
 .section, section {
   padding: 4rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Titelblokken voor secties */
 .section-title {
   text-align: center;
   margin-bottom: 2rem;
@@ -150,9 +160,9 @@ nav a:hover {
   color: var(--fg);
 }
 
-/* ===============================
-   Producten overzicht (grid)
-   =============================== */
+/* =========================================
+   Product-grid
+   ========================================= */
 .product-grid {
   display: grid;
   gap: 2rem;
@@ -194,9 +204,9 @@ nav a:hover {
   margin: 1rem;
 }
 
-/* ===============================
-   Artikelen overzicht (grid)
-   =============================== */
+/* =========================================
+   Artikelen-grid
+   ========================================= */
 .article-grid {
   display: grid;
   gap: 2rem;
@@ -233,24 +243,24 @@ nav a:hover {
   margin: 1rem;
 }
 
-/* ===============================
+/* =========================================
    Footer
-   =============================== */
+   ========================================= */
 footer {
-  background: var(--bg);
-  color: var(--fg);
+  background: #f1f1f1;
+  color: #444;
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.875rem;
   border-top: 1px solid rgba(0,0,0,0.1);
 }
 
-/* ===============================
-   Responsieve aanpassingen (mobiel)
-   =============================== */
+/* =========================================
+   Responsiveness (mobiel)
+   ========================================= */
 @media (max-width: 768px) {
   .hero {
-    height: 35vh;                      /* Nog compacter op mobiel */
+    height: 35vh;
   }
 
   .hero-overlay h1 {
@@ -259,6 +269,10 @@ footer {
 
   .hero-overlay p {
     font-size: 1rem;
+  }
+
+  .section, section {
+    padding: 2rem 1rem;
   }
 
   .section-title h2 {
