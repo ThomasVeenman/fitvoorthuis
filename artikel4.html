@@ -3,52 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Budget Home Gym Inrichten: Slimme Keuzes Voor Thuisfitness</title>
+  <title>Een Budget Thuisgym Inrichten: Alles Wat Je Moet Weten</title>
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
   <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background-color: #f8fafc;
-      color: #111827;
-    }
-
-    header nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1.5rem 0;
-      background: #ffffff;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #1f2937;
-      font-weight: 500;
-    }
-
-    nav a.active {
-      color: #10b981;
-    }
-
-    .hero {
-      background-image: url('hero-banner.jpg'); /* Vervang met jouw hero image */
-      background-size: cover;
-      background-position: center;
-      padding: 6rem 2rem;
-      color: white;
-      text-align: center;
-    }
-
-    .hero-overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 4rem 2rem;
-      border-radius: 12px;
-      max-width: 900px;
-      margin: auto;
-    }
-
     .content-box {
       background: #ffffff;
       padding: 3rem 2rem;
@@ -81,46 +38,65 @@
       font-size: 1.05rem;
     }
 
-    .highlight {
+    .content-box .highlight {
       background-color: #f1f5f9;
       padding: 1.75rem;
-      border-left: 5px solid #10b981;
+      border-left: 5px solid var(--cta);
       border-radius: 0.5rem;
       margin: 3rem 0;
     }
 
+    .cta-button {
+      display: inline-block;
+      background-color: var(--cta, #0085FF);
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 1rem;
+      text-align: center;
+    }
+
     .product-image {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
       display: block;
-      margin: 2rem auto 1rem;
-      max-width: 300px;
-      width: 100%;
-      height: auto;
+      margin: 1.5rem auto 1rem;
       border-radius: 12px;
     }
 
-    .cta-button {
-      display: block;
-      width: fit-content;
-      margin: 1rem auto 3rem;
-      background-color: #10b981;
-      color: white;
-      text-decoration: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-
-    .cta-button:hover {
-      background-color: #059669;
-    }
-
-    footer {
+    .hero {
+      background: url('hero-thuisgym.jpg') center/cover no-repeat;
+      padding: 6rem 2rem;
       text-align: center;
+      color: white;
+    }
+
+    .hero-overlay {
+      background-color: rgba(0, 0, 0, 0.6);
       padding: 2rem;
-      font-size: 0.9rem;
-      background: #f9fafb;
-      color: #6b7280;
+      border-radius: 1rem;
+      display: inline-block;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1.5rem 0;
+      background-color: #f8f9fa;
+      font-weight: 600;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    nav a.active {
+      color: #0085FF;
     }
   </style>
 </head>
@@ -129,8 +105,8 @@
   <!-- Hero -->
   <div class="hero">
     <div class="hero-overlay">
-      <h1>Budget Home Gym Inrichten</h1>
-      <p>Betaalbaar, effectief en stijlvol trainen — gewoon vanuit huis.</p>
+      <h1>Een Budget Thuisgym Inrichten</h1>
+      <p>Maximaal resultaat zonder een fortuin uit te geven.</p>
     </div>
   </div>
 
@@ -143,44 +119,52 @@
     </nav>
   </header>
 
-  <!-- Artikel -->
+  <!-- Content -->
   <section class="content-box">
     <div class="artikel-inhoud">
-      <h1>Zo richt je een home gym in met een beperkt budget</h1>
-      <p>Een home gym hoeft niet duur te zijn. Met slimme keuzes en compacte apparatuur kun je ook met een beperkt budget een complete trainingsruimte creëren. In dit artikel laten we zien welke producten je écht nodig hebt — en welke je gerust kunt overslaan.</p>
+      <h1>Een Budgetvriendelijke Thuisgym Inrichten: Slim & Effectief</h1>
 
-      <h2>Verstelbare dumbbells: 1 set, eindeloze mogelijkheden</h2>
-      <p>In plaats van 6 verschillende halters, kies je voor één verstelbare dumbbellset. Hiermee bespaar je ruimte én geld. Ideaal voor full-body workouts thuis.</p>
-      <img src="verstelbare-dumbbells.jpg" alt="Verstelbare dumbbells" class="product-image">
-      <a href="https://www.fitvoorthuis.nl/verstelbare-dumbbells" class="cta-button">Bekijk dumbbells</a>
+      <p>Wil je thuis trainen zonder duizenden euro’s uit te geven aan apparatuur? Goed nieuws: een effectieve thuisgym hoeft écht niet duur te zijn. Met slimme keuzes kun je je eigen trainingsruimte opzetten die zowel functioneel als betaalbaar is.</p>
 
-      <h2>Kettlebells: functioneel en betaalbaar</h2>
-      <p>Kettlebells zijn goedkoop, veelzijdig en perfect voor cardio én kracht. Met één kettlebell van het juiste gewicht kun je tientallen oefeningen doen.</p>
-      <img src="kettlebell.jpg" alt="Kettlebell" class="product-image">
-      <a href="https://www.fitvoorthuis.nl/kettlebells" class="cta-button">Bekijk kettlebells</a>
+      <h2>1. Begin met de basis</h2>
+      <p>Investeer in een paar veelzijdige producten waarmee je veel verschillende oefeningen kunt doen. Denk aan:</p>
+      <ul>
+        <li>Verstelbare dumbbells</li>
+        <li>Weerstandsbanden</li>
+        <li>Een verstelbare trainingsbank</li>
+        <li>Een optrekstang voor in een deuropening</li>
+      </ul>
+      <img src="images/verstelbare-dumbbells.jpg" alt="Verstelbare dumbbells" class="product-image">
+      <a class="cta-button" href="https://www.fitvoorthuis.nl/verstelbare-dumbbells/">Bekijk verstelbare dumbbells</a>
 
-      <h2>Trainingsbankje: niet per se nodig, maar handig</h2>
-      <p>Voor bankdrukken, bulgarian split squats en dumbbell rows is een bankje erg fijn, maar het is geen must. Kies eventueel voor een opvouwbaar model om ruimte te besparen.</p>
-      <img src="fitnessbank.jpg" alt="Fitnessbank" class="product-image">
-      <a href="https://www.fitvoorthuis.nl/fitnessbanken" class="cta-button">Bekijk bankjes</a>
+      <h2>2. Denk multifunctioneel</h2>
+      <p>Kies voor spullen die je voor meerdere spiergroepen kunt gebruiken. Een suspension trainer (zoals TRX) biedt bijvoorbeeld eindeloze trainingsopties met slechts één tool.</p>
+      <img src="images/suspension-trainer.jpg" alt="Suspension trainer" class="product-image">
+      <a class="cta-button" href="https://www.fitvoorthuis.nl/suspension-trainers/">Bekijk suspension trainers</a>
 
-      <h2>Optioneel: pull-up bar of suspension trainer</h2>
-      <p>Voor bodyweight training zijn een deurrek of een TRX-set super effectief. Beide zijn betaalbaar, compact en veelzijdig inzetbaar.</p>
-      <img src="trx.jpg" alt="Suspension trainer" class="product-image">
-      <a href="https://www.fitvoorthuis.nl/trx" class="cta-button">Bekijk suspension trainers</a>
+      <h2>3. Wees creatief met ruimte</h2>
+      <p>Ook met beperkte ruimte kun je aan de slag. Gebruik een opklapbare bank, een yogamat en opbergboxen voor gewichten om je kamer multifunctioneel te houden.</p>
+
+      <h2>4. Wat je (nog) niet nodig hebt</h2>
+      <p>Dure machines zoals leg presses of smith machines zijn overbodig voor een beginner. Focus eerst op de basics die je wél gebruikt.</p>
 
       <div class="highlight">
-        <h2>Budgettip:</h2>
+        <h2>Checklist voor een budget home gym:</h2>
         <ul>
-          <li>Koop tweedehands waar mogelijk (Marktplaats / Facebook Marketplace)</li>
-          <li>Begin klein – breid uit naarmate je motivatie groeit</li>
-          <li>Focus op multi-inzetbare items zoals dumbbells of kettlebells</li>
+          <li>✅ Dumbbells of weerstandsbanden</li>
+          <li>✅ Trainingsmat of vloerbescherming</li>
+          <li>✅ Pull-up bar of suspension trainer</li>
+          <li>✅ Compacte trainingsbank</li>
+          <li>✅ Opbergmogelijkheden</li>
         </ul>
       </div>
 
+      <a class="cta-button" href="https://www.fitvoorthuis.nl">➡️ Bekijk alle budget fitnessoplossingen</a>
+
       <h2>Conclusie</h2>
-      <p>Je hebt geen duizenden euro’s nodig voor een effectieve home gym. Met een paar slimme investeringen kun je thuis al enorm veel bereiken. Begin met essentials, en bouw je setup uit naarmate je vordert.</p>
-      <p><strong>FitVoorThuis.nl</strong> helpt je met eerlijke info, reviews en de beste deals voor je thuisgym.</p>
+      <p>Een thuisgym hoeft niet duur of groot te zijn. Door slimme keuzes en compacte apparatuur creëer je een ruimte waar je dagelijks kunt trainen, zonder gedoe en zonder hoge kosten.</p>
+
+      <p><strong>Start vandaag nog — en bouw je gezondheid op vanuit huis, stap voor stap.</strong></p>
     </div>
   </section>
 
