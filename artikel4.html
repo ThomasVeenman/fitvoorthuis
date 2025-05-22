@@ -1,55 +1,56 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>De Beste Thuisgym Opbouwen met een Klein Budget</title>
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
   <style>
     body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: Arial, sans-serif;
       background-color: #f9fafb;
       margin: 0;
-      padding: 0;
       color: #1f2937;
-    }
-
-    .hero {
-      background: url('hero-image.jpg') center/cover no-repeat;
-      padding: 4rem 2rem;
-      text-align: center;
-      color: #fff;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
     }
 
     header {
       background-color: #ffffff;
       padding: 1rem 2rem;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #e5e7eb;
     }
 
     nav {
+      max-width: 900px;
+      margin: 0 auto;
       display: flex;
       justify-content: center;
       gap: 2rem;
     }
 
     nav a {
-      color: #1f2937;
+      color: #374151;
       text-decoration: none;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     nav a.active {
-      color: #2563eb;
+      color: #16a34a;
+    }
+
+    .hero {
+      background: url('hero-image.jpg') center/cover no-repeat;
+      text-align: center;
+      color: white;
+      padding: 6rem 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
     }
 
     .content-box {
@@ -84,138 +85,95 @@
       font-size: 1.05rem;
     }
 
-    .content-box .highlight {
-      background-color: #f1f5f9;
-      padding: 1.75rem;
-      border-left: 5px solid #2563eb;
-      border-radius: 0.5rem;
-      margin: 3rem 0;
-    }
-
-    .cta-button {
-      display: inline-block;
-      margin: 1rem 0 2.5rem;
-      padding: 0.75rem 1.25rem;
-      background-color: #2563eb;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 0.5rem;
-      transition: background 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #1e40af;
-    }
-
     .product-image {
       display: block;
-      margin: 1.5rem auto;
+      margin: 2rem auto;
       width: 400px;
       height: 400px;
       object-fit: cover;
       border-radius: 12px;
     }
 
+    .cta-button {
+      display: block;
+      margin: 1.5rem auto 3rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #16a34a;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      width: fit-content;
+    }
+
+    .cta-button:hover {
+      background-color: #15803d;
+    }
+
     footer {
-      background-color: #f9fafb;
+      background-color: #f3f4f6;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       color: #6b7280;
     }
-
-    @media (max-width: 600px) {
-      .product-image {
-        width: 100%;
-        height: auto;
-      }
-
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .hero p {
-        font-size: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <div class="hero">
-    <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
-    <p>Ontdek betaalbare fitnessapparatuur die écht werkt.</p>
-  </div>
+<header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#artikelen" class="active">Artikelen</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
 
-  <!-- Navigatie -->
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="index.html#artikelen" class="active">Artikelen</a>
-      <a href="index.html#contact">Contact</a>
-    </nav>
-  </header>
+<div class="hero">
+  <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
+  <p>Ontdek betaalbare fitnessapparatuur die echt werkt.</p>
+</div>
 
-  <!-- Content -->
-  <section class="content-box">
-    <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
+<section class="content-box">
+  <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
+  <p>Wil je een effectieve thuisgym bouwen zonder je bankrekening te plunderen? Goed nieuws: met de juiste keuzes kun je voor minder dan €500 een functionele gym opzetten. Hieronder ontdek je de essentiële uitrusting.</p>
 
-    <p>Wil je een effectieve thuisgym bouwen zonder je bankrekening te plunderen? Goed nieuws: met de juiste keuzes kun je voor minder dan €500 een functionele en complete gym opzetten. Hieronder ontdek je de essentiële uitrusting die maximale veelzijdigheid biedt voor een minimaal budget.</p>
+  <h2>Verstelbare Dumbbells</h2>
+  <p>Een set verstelbare dumbbells bespaart ruimte en geld. Met een simpele klik pas je het gewicht aan voor verschillende oefeningen.</p>
+  <img src="verstelbare-dumbbells.jpg" alt="Verstelbare Dumbbells" class="product-image">
+  <a href="verstelbare-dumbbells.html" class="cta-button">Bekijk Verstelbare Dumbbells</a>
 
-    <h2>1. Waarom investeren in een thuisgym?</h2>
-    <p>Een thuisgym biedt gemak, privacy en bespaart je op de lange termijn flink wat geld. Geen reistijd, geen abonnementskosten en altijd beschikbaar. Voor wie serieus aan de slag wil met kracht- of conditietraining is een kleine investering snel terugverdiend.</p>
+  <h2>Weerstandsbanden</h2>
+  <p>Deze banden zijn compact, veelzijdig en ideaal voor kracht- en mobiliteitstraining.</p>
+  <img src="weerstandsbanden.jpg" alt="Weerstandsbanden" class="product-image">
+  <a href="weerstandsbanden.html" class="cta-button">Bekijk Weerstandsbanden</a>
 
-    <h2>2. Essentiële producten onder €500</h2>
+  <h2>Fitnessbank</h2>
+  <p>Een verstelbare bank maakt oefeningen als bench press en step-ups mogelijk.</p>
+  <img src="fitnessbank.jpg" alt="Fitnessbank" class="product-image">
+  <a href="fitnessbank.html" class="cta-button">Bekijk Fitnessbank</a>
 
-    <h3>Verstelbare Dumbbells</h3>
-    <p>Met verstelbare dumbbells vervang je een hele set losse gewichten. Ze besparen ruimte en kosten op de lange termijn.</p>
-    <img src="verstelbare-dumbbells.jpg" alt="Verstelbare Dumbbells" class="product-image">
-    <a href="verstelbare-dumbbells.html" class="cta-button">Bekijk Verstelbare Dumbbells</a>
+  <h2>Pull-up Bar</h2>
+  <p>Voor een sterke rug en core. Past in elke deuropening.</p>
+  <img src="pull-up-bar.jpg" alt="Pull-up Bar" class="product-image">
+  <a href="pull-up-bar.html" class="cta-button">Bekijk Pull-up Bar</a>
 
-    <h3>Weerstandsbanden</h3>
-    <p>Ideaal voor warming-ups, mobiliteitsoefeningen en lichte krachttraining. Makkelijk op te bergen en veelzijdig in gebruik.</p>
-    <img src="weerstandsbanden.jpg" alt="Weerstandsbanden" class="product-image">
-    <a href="weerstandsbanden.html" class="cta-button">Bekijk Weerstandsbanden</a>
+  <h2>Yogamat</h2>
+  <p>Comfort voor grondoefeningen, yoga of stretchen. Kies een mat met antislip.</p>
+  <img src="yogamat.jpg" alt="Yogamat" class="product-image">
+  <a href="yogamat.html" class="cta-button">Bekijk Yogamatten</a>
 
-    <h3>Fitnessbank</h3>
-    <p>Onmisbaar voor bankdrukken, step-ups of buikspieroefeningen. Een verstelbare variant biedt extra mogelijkheden en comfort.</p>
-    <img src="fitnessbank.jpg" alt="Fitnessbank" class="product-image">
-    <a href="verstelbare-fitnessbank.html" class="cta-button">Bekijk Fitnessbanken</a>
+  <h2>Foam Roller</h2>
+  <p>Voor spierherstel en mobiliteit. Perfect na intensieve training.</p>
+  <img src="foam-roller.jpg" alt="Foam Roller" class="product-image">
+  <a href="foam-roller.html" class="cta-button">Bekijk Foam Rollers</a>
+</section>
 
-    <h3>Pull-up Bar</h3>
-    <p>Versterk je rug, armen en core met deze compacte klassieker. Eenvoudig te bevestigen aan een deurpost of muur.</p>
-    <img src="pull-up-bar.jpg" alt="Pull-up Bar" class="product-image">
-    <a href="pull-up-bar.html" class="cta-button">Bekijk Pull-up Bars</a>
-
-    <h3>Yogamat</h3>
-    <p>Essentieel voor comfort tijdens stretching, yoga en core-training. Kies voor een dikke mat met goede grip.</p>
-    <img src="yogamat.jpg" alt="Yogamat" class="product-image">
-    <a href="yogamat.html" class="cta-button">Bekijk Yogamatten</a>
-
-    <h3>Foam Roller</h3>
-    <p>Stimuleert spierherstel, vermindert stijfheid en verbetert mobiliteit. Onmisbaar na een zware training.</p>
-    <img src="foam-roller.jpg" alt="Foam Roller" class="product-image">
-    <a href="foam-roller.html" class="cta-button">Bekijk Foam Rollers</a>
-
-    <h2>3. Slimme Tips om je Budget te Maximaliseren</h2>
-    <ul>
-      <li><strong>Kies voor multifunctionele producten:</strong> Denk aan verstelbare dumbbells en banken die meerdere oefeningen mogelijk maken.</li>
-      <li><strong>Start klein en breid uit:</strong> Begin met de basics en voeg later extra’s toe zoals kettlebells of cardio-apparatuur.</li>
-      <li><strong>Gebruik je ruimte slim:</strong> Investeer in opklapbare of compacte apparatuur als je weinig plek hebt.</li>
-      <li><strong>Ventilatie en verlichting:</strong> Een frisse, goed verlichte ruimte maakt trainen prettiger en veiliger.</li>
-    </ul>
-
-    <div class="highlight">
-      <p><strong>Conclusie:</strong> Met een klein budget kun je een krachtige thuisgym opzetten. Begin met de juiste basisproducten en bouw rustig verder. FitVoorThuis.nl helpt je met slimme keuzes en betrouwbare aanbevelingen.</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 FitVoorThuis.nl – Alle rechten voorbehouden.</p>
-    <p><em>Disclaimer:</em> Deze pagina bevat affiliate links. Als je via een van deze links iets koopt, ontvangen wij mogelijk een commissie — zonder extra kosten voor jou.</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 FitVoorThuis.nl – Alle rechten voorbehouden.</p>
+  <p><em>Disclaimer:</em> Deze pagina bevat affiliate links. Als je via een van deze links iets koopt, ontvangen wij mogelijk een commissie — zonder extra kosten voor jou.</p>
+</footer>
 
 </body>
 </html>
