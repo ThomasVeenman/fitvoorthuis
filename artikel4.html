@@ -2,368 +2,138 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thuisgym Inrichten met Klein Budget | FitVoorThuis.nl</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>De Beste Thuisgym Opbouwen met een Klein Budget</title>
+  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
   <style>
-    /* CSS Reset & basis */
-    *, *::before, *::after {
-      box-sizing: border-box;
+    .content-box {
+      background: #ffffff;
+      padding: 3rem 2rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+      max-width: 850px;
+      margin: 4rem auto;
     }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9fafb;
-      color: #222;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    a {
-      color: #007BFF;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover,
-    a:focus {
-      color: #0056b3;
-      outline: none;
-    }
-
-    /* Container */
-    .container {
-      max-width: 900px;
-      margin: 3rem auto 4rem;
-      background: white;
-      padding: 2.5rem 2rem 3rem;
-      border-radius: 1rem;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
-    }
-
-    /* Header */
-    header {
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav {
-      max-width: 900px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 1rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1.75rem;
-    }
-
-    .nav-links a {
-      font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      user-select: none;
-    }
-
-    .nav-links a.active,
-    .nav-links a:hover,
-    .nav-links a:focus {
-      background: #007BFF;
-      color: white;
-      outline: none;
-    }
-
-    /* Mobile nav */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      width: 24px;
-      height: 18px;
-      justify-content: space-between;
-    }
-
-    .hamburger span {
-      height: 3px;
-      background: #007BFF;
-      border-radius: 2px;
-      transition: all 0.3s ease;
-    }
-
-    /* Responsive nav menu */
-    @media (max-width: 720px) {
-      .nav-links {
-        position: fixed;
-        top: 60px;
-        right: 0;
-        background: white;
-        height: calc(100vh - 60px);
-        width: 220px;
-        flex-direction: column;
-        padding: 2rem 1rem;
-        box-shadow: -4px 0 8px rgba(0,0,0,0.1);
-        transform: translateX(100%);
-        transition: transform 0.3s ease;
-        z-index: 1000;
-      }
-      .nav-links.open {
-        transform: translateX(0);
-      }
-
-      .hamburger {
-        display: flex;
-      }
-    }
-
-    /* Page title */
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: #111;
-    }
-
-    em {
-      font-size: 1.125rem;
-      color: #555;
-      display: block;
-      margin-bottom: 2rem;
-      font-weight: 500;
-    }
-
-    h2 {
-      font-size: 1.75rem;
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-      color: #222;
-      border-bottom: 3px solid #007BFF;
-      padding-bottom: 0.2rem;
-    }
-
-    h3 {
-      font-size: 1.35rem;
+    .content-box h2, .content-box h3 {
       margin-top: 2.5rem;
-      margin-bottom: 0.7rem;
-      font-weight: 600;
-      color: #007BFF;
+      margin-bottom: 1rem;
+      line-height: 1.3;
     }
 
-    p {
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+    .content-box p {
+      margin-bottom: 1.75rem;
+      font-size: 1.05rem;
       color: #333;
     }
 
-    ul {
-      margin: 1rem 0 2rem 1.5rem;
-      color: #444;
+    .content-box ul {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .content-box li {
+      margin-bottom: 0.75rem;
       font-size: 1.05rem;
     }
 
-    li {
-      margin-bottom: 0.7rem;
+    .content-box .highlight {
+      background-color: #f1f5f9;
+      padding: 1.75rem;
+      border-left: 5px solid #2563eb;
+      border-radius: 0.5rem;
+      margin: 3rem 0;
     }
 
-    /* Call to action buttons */
     .cta-button {
       display: inline-block;
-      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
-      color: white;
-      padding: 0.7rem 1.6rem;
-      border-radius: 0.75rem;
-      font-weight: 700;
-      font-size: 1.1rem;
-      cursor: pointer;
-      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.5);
-      border: none;
-      transition: all 0.3s ease;
-      user-select: none;
-      margin-top: 1rem;
-      text-align: center;
+      margin: 1rem 0 2.5rem;
+      padding: 0.75rem 1.25rem;
+      background-color: #2563eb;
+      color: #fff;
       text-decoration: none;
+      border-radius: 0.5rem;
+      transition: background 0.3s ease;
     }
 
-    .cta-button:hover,
-    .cta-button:focus {
-      background: linear-gradient(135deg, #1E40AF 0%, #1E3A8A 100%);
-      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.7);
-      outline: none;
-      transform: translateY(-2px);
-    }
-
-    /* Product image placeholder */
-    .product-image {
-      width: 100%;
-      max-width: 600px;
-      margin: 1.5rem auto;
-      display: block;
-      border-radius: 1rem;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.12);
-    }
-
-    /* Highlight box */
-    .highlight {
-      background: #EFF6FF;
-      border-left: 5px solid #2563EB;
-      padding: 1.75rem 2rem;
-      margin-top: 3rem;
-      border-radius: 0.75rem;
-      font-weight: 600;
-      font-size: 1.15rem;
-      color: #1E40AF;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      padding: 2.5rem 1rem;
-      background: #f3f4f6;
-      color: #666;
-      user-select: none;
-    }
-
-    /* Accessibility: focus outline for keyboard nav */
-    a:focus-visible, button:focus-visible {
-      outline: 3px solid #2563EB;
-      outline-offset: 2px;
+    .cta-button:hover {
+      background-color: #1e40af;
     }
   </style>
 </head>
 <body>
 
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
+      <p>Ontdek betaalbare fitnessapparatuur die écht werkt.</p>
+    </div>
+  </div>
+
+  <!-- Navigatie -->
   <header>
-    <nav aria-label="Hoofdnavigatie">
-      <div class="logo">
-        <a href="index.html" aria-label="Ga naar homepage" style="font-weight:700; font-size:1.5rem; color:#007BFF; text-decoration:none;">FitVoorThuis.nl</a>
-      </div>
-      <button class="hamburger" aria-label="Menu openen" aria-expanded="false" aria-controls="primary-navigation" id="menuButton">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-links" id="primary-navigation">
-        <a href="index.html">Home</a>
-        <a href="artikelen.html" class="active" aria-current="page">Artikelen</a>
-        <a href="contact.html">Contact</a>
-      </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#artikelen" class="active">Artikelen</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </header>
 
-  <main class="container" role="main">
-    <h1>Hoe Richt Je een Thuisgym In met een Klein Budget?</h1>
-    <em>De ultieme gids om efficiënt en betaalbaar je fitnessdoelen thuis te bereiken</em>
+  <!-- Content -->
+  <section class="content-box">
+    <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
 
-    <p>Een thuisgym biedt de vrijheid om op elk moment te trainen, zonder reistijd of drukte. Maar hoe richt je zo’n ruimte in als je budget beperkt is? Met de juiste keuzes en focus op multifunctionele, compacte en betaalbare fitnessproducten creëer je een effectieve workoutplek die bij jouw doelen past. In deze gids ontdek je hoe je dat doet — met behulp van de best beoordeelde productcategorieën van FitVoorThuis.nl.</p>
+    <p>Wil je een effectieve thuisgym bouwen zonder je bankrekening te plunderen? Goed nieuws: met de juiste keuzes kun je voor minder dan €500 een functionele en complete gym opzetten. Hieronder ontdek je de essentiële uitrusting die maximale veelzijdigheid biedt voor een minimaal budget.</p>
 
-    <h2>1. Begin met een Helder Plan en Juiste Prioriteiten</h2>
-    <p>Een goede thuisgym start met het bepalen van jouw persoonlijke fitnessdoelen: wil je kracht opbouwen, je conditie verbeteren of werken aan flexibiliteit en herstel? Kies vervolgens de apparatuur die daar het beste bij past en let daarbij op ruimte en budget.</p>
+    <h2>1. Waarom investeren in een thuisgym?</h2>
+    <p>Een thuisgym biedt gemak, privacy en bespaart je op de lange termijn flink wat geld. Geen reistijd, geen abonnementskosten en altijd beschikbaar. Voor wie serieus aan de slag wil met kracht- of conditietraining is een kleine investering snel terugverdiend.</p>
 
-    <h2>2. Essentiële Productcategorieën voor een Thuisgym met Klein Budget</h2>
-    <p>FitVoorThuis.nl onderscheidt de belangrijkste categorieën die jou helpen om doelgericht en efficiënt te trainen. Hieronder vind je de beste opties die je nodig hebt om een veelzijdige en professionele thuisgym in te richten:</p>
+    <h2>2. Essentiële producten onder €500</h2>
 
-    <section>
-      <h3>Verstelbare Dumbbells</h3>
-      <p>De basis voor elke krachttraining. Verstelbare dumbbells bieden verschillende gewichten in één set, waardoor je ruimte bespaart en toch progressief kunt trainen. Perfect voor beginners én gevorderden.</p>
-      <a href="verstelbare-dumbbells.html" class="cta-button" aria-label="Bekijk Verstelbare Dumbbells">Bekijk Verstelbare Dumbbells</a>
-      <!-- <img src="verstelbare-dumbbells.jpg" alt="Verstelbare Dumbbells" class="product-image" /> -->
-    </section>
+    <h3>Verstelbare Dumbbells</h3>
+    <p>Met verstelbare dumbbells vervang je een hele set losse gewichten. Ze besparen ruimte en kosten op de lange termijn.</p>
+    <a href="verstelbare-dumbbells.html" class="cta-button">Bekijk Verstelbare Dumbbells</a>
 
-    <section>
-      <h3>Weerstandsbanden</h3>
-      <p>Compact en super veelzijdig. Ideaal voor krachttraining, mobiliteitsoefeningen en revalidatie. Met verschillende weerstandsniveaus kun je elke spiergroep effectief trainen.</p>
-      <a href="weerstandsbanden.html" class="cta-button" aria-label="Bekijk Weerstandsbanden">Bekijk Weerstandsbanden</a>
-    </section>
+    <h3>Weerstandsbanden</h3>
+    <p>Ideaal voor warming-ups, mobiliteitsoefeningen en lichte krachttraining. Makkelijk op te bergen en veelzijdig in gebruik.</p>
+    <a href="weerstandsbanden.html" class="cta-button">Bekijk Weerstandsbanden</a>
 
-    <section>
-      <h3>Kettlebells</h3>
-      <p>Geweldig voor dynamische kracht- en cardiotraining. Kettlebells combineren kracht en uithoudingsvermogen in functionele bewegingen, en nemen weinig ruimte in beslag.</p>
-      <a href="kettlebells.html" class="cta-button" aria-label="Bekijk Kettlebells">Bekijk Kettlebells</a>
-    </section>
+    <h3>Fitnessbank</h3>
+    <p>Onmisbaar voor bankdrukken, step-ups of buikspieroefeningen. Een verstelbare variant biedt extra mogelijkheden en comfort.</p>
+    <a href="verstelbare-fitnessbank.html" class="cta-button">Bekijk Fitnessbanken</a>
 
-    <section>
-      <h3>Loopband</h3>
-      <p>Wil je je conditie verbeteren? Een loopband is dé klassieker voor cardio thuis, waarmee je op elk moment kunt wandelen of hardlopen, ongeacht het weer buiten.</p>
-      <a href="loopband.html" class="cta-button" aria-label="Bekijk Loopband">Bekijk Loopband</a>
-    </section>
+    <h3>Pull-up Bar</h3>
+    <p>Versterk je rug, armen en core met deze compacte klassieker. Eenvoudig te bevestigen aan een deurpost of muur.</p>
+    <a href="pull-up-bar.html" class="cta-button">Bekijk Pull-up Bars</a>
 
-    <section>
-      <h3>Crosstrainer</h3>
-      <p>Een low-impact cardio-optie die zowel je armen als benen traint. Crosstrainers zijn ideaal voor een full-body workout zonder je gewrichten te belasten.</p>
-      <a href="crosstrainer.html" class="cta-button" aria-label="Bekijk Crosstrainers">Bekijk Crosstrainers</a>
-    </section>
+    <h3>Yogamat</h3>
+    <p>Essentieel voor comfort tijdens stretching, yoga en core-training. Kies voor een dikke mat met goede grip.</p>
+    <a href="yogamat.html" class="cta-button">Bekijk Yogamatten</a>
 
-    <section>
-      <h3>Hometrainer</h3>
-      <p>Een compacte en efficiënte manier om je uithoudingsvermogen te verbeteren. Hometrainers zijn geschikt voor bijna elk niveau en perfect voor in kleine ruimtes.</p>
-      <a href="hometrainer.html" class="cta-button" aria-label="Bekijk Hometrainers">Bekijk Hometrainers</a>
-    </section>
-
-    <section>
-      <h3>Suspension Trainer (TRX)</h3>
-      <p>Met een TRX-systeem train je met je eigen lichaamsgewicht. Dit apparaat is licht, draagbaar en zeer veelzijdig, perfect voor kracht, stabiliteit en flexibiliteit.</p>
-      <a href="suspension-trainer.html" class="cta-button" aria-label="Bekijk Suspension Trainers">Bekijk Suspension Trainers</a>
-    </section>
-
-    <section>
-      <h3>Verstelbare Fitnessbank</h3>
-      <p>Een fitnessbank maakt veel oefeningen mogelijk, van dumbbell presses tot core training. Een verstelbare variant biedt extra mogelijkheden en comfort.</p>
-      <a href="verstelbare-fitnessbank.html" class="cta-button" aria-label="Bekijk Verstelbare Fitnessbanken">Bekijk Verstelbare Fitnessbanken</a>
-    </section>
-
-    <section>
-      <h3>Pull-up Bar</h3>
-      <p>Een klassieke tool om je bovenlichaam te versterken. Pull-up bars zijn betaalbaar, nemen weinig ruimte in en bieden talloze variaties voor een sterke rug en armen.</p>
-      <a href="pull-up-bar.html" class="cta-button" aria-label="Bekijk Pull-up Bars">Bekijk Pull-up Bars</a>
-    </section>
-
-    <section>
-      <h3>Yogamat</h3>
-      <p>Comfort en grip zijn essentieel voor stretching, yoga en floorworkouts. Een kwalitatieve yogamat zorgt voor de juiste ondergrond.</p>
-      <a href="yogamat.html" class="cta-button" aria-label="Bekijk Yogamatten">Bekijk Yogamatten</a>
-    </section>
-
-    <section>
-      <h3>Foam Roller</h3>
-      <p>Onmisbaar voor spierherstel en mobiliteit. Foam rollers helpen bij het losmaken van spierknopen en bevorderen het herstel na zware trainingen.</p>
-      <a href="foam-roller.html" class="cta-button" aria-label="Bekijk Foam Rollers">Bekijk Foam Rollers</a>
-    </section>
+    <h3>Foam Roller</h3>
+    <p>Stimuleert spierherstel, vermindert stijfheid en verbetert mobiliteit. Onmisbaar na een zware training.</p>
+    <a href="foam-roller.html" class="cta-button">Bekijk Foam Rollers</a>
 
     <h2>3. Slimme Tips om je Budget te Maximaliseren</h2>
     <ul>
-      <li>Kies voor multifunctionele producten: Denk aan verstelbare dumbbells en banken die veel oefeningen mogelijk maken.</li>
-      <li>Start klein en breid uit: Investeer eerst in basisproducten en voeg later accessoires toe voor variatie en herstel.</li>
-      <li>Optimaliseer ruimtegebruik: Apparaten zoals pull-up bars nemen weinig plek in, ideaal voor thuis.</li>
-      <li>Goede ventilatie en verlichting: Frisse lucht en helder licht maken je workout aangenamer.</li>
+      <li><strong>Kies voor multifunctionele producten:</strong> Denk aan verstelbare dumbbells en banken die meerdere oefeningen mogelijk maken.</li>
+      <li><strong>Start klein en breid uit:</strong> Begin met de basics en voeg later extra’s toe zoals kettlebells of cardio-apparatuur.</li>
+      <li><strong>Gebruik je ruimte slim:</strong> Investeer in opklapbare of compacte apparatuur als je weinig plek hebt.</li>
+      <li><strong>Ventilatie en verlichting:</strong> Een frisse, goed verlichte ruimte maakt trainen prettiger en veiliger.</li>
     </ul>
 
-    <div class="highlight" role="note" aria-label="Conclusie">
-      <p><strong>Conclusie:</strong> Met een klein budget en slimme keuzes richt je een complete thuisgym in die je helpt je fitnessdoelen te bereiken. Start met de essentiële producten en bouw rustig uit. FitVoorThuis.nl staat voor je klaar met betrouwbare reviews en top producten.</p>
+    <div class="highlight">
+      <p><strong>Conclusie:</strong> Met een klein budget kun je een krachtige thuisgym opzetten. Begin met de juiste basisproducten en bouw rustig verder. FitVoorThuis.nl helpt je met slimme keuzes en betrouwbare aanbevelingen.</p>
     </div>
-  </main>
+  </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 FitVoorThuis.nl - Alle rechten voorbehouden.
+    <p>&copy; 2025 FitVoorThuis.nl – Alle rechten voorbehouden.</p>
+    <p><em>Disclaimer:</em> Deze pagina bevat affiliate links. Als je via een van deze links iets koopt, ontvangen wij mogelijk een commissie — zonder extra kosten voor jou.</p>
   </footer>
 
-  <script>
-    // Mobiele navigatie togglen
-    const menuButton = document.getElementById('menuButton');
-    const navLinks = document.getElementById('primary-navigation');
-
-    menuButton.addEventListener('click', () => {
-      const expanded = menuButton.getAttribute('aria-expanded') === 'true' || false;
-      menuButton.setAttribute('aria-expanded', !expanded);
-      navLinks.classList.toggle('open');
-    });
-  </script>
 </body>
 </html>
