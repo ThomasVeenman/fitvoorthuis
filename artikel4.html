@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hoe richt je een thuisgym in met een klein budget?</title>
-    <!-- Asynchroon laden van de stylesheet -->
-    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+    <style>
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        section.product-category {
+            margin-bottom: 50px;
+        }
+        section.product-category img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover,
+        .cta-button:focus {
+            background-color: #0056b3;
+        }
+        header nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            margin: 40px 0 20px 0;
+            font-family: Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,8 +70,109 @@
     <!-- Artikelinhoud -->
     <main>
         <h1>Hoe richt je een thuisgym in met een klein budget?</h1>
-        <img src="images/budget-thuisgym.jpg" alt="Budget thuisgym" loading="lazy">
-        <p>… praktische tips en budgetproducten …</p>
+        <img src="images/budget-thuisgym.jpg" alt="Budget thuisgym" loading="lazy" />
+
+        <p>Een thuisgym biedt de vrijheid om op elk moment te trainen, zonder reistijd of drukte. Met de juiste keuzes en focus op multifunctionele, compacte en betaalbare fitnessproducten creëer je een effectieve workoutplek die bij jouw doelen past.</p>
+
+        <section class="product-category" id="verstelbare-dumbbells">
+            <h2>Verstelbare Dumbbells</h2>
+            <p>De basis voor elke krachttraining. Verstelbare dumbbells bieden verschillende gewichten in één set, waardoor je ruimte bespaart en toch progressief kunt trainen. Perfect voor beginners én gevorderden.</p>
+            <img src="images/verstelbare-dumbbells.jpg" alt="Verstelbare Dumbbells" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-verstelbare-dumbbells" class="cta-button">Bekijk Verstelbare Dumbbells</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="weerstandsbanden">
+            <h2>Weerstandsbanden</h2>
+            <p>Compact en super veelzijdig. Ideaal voor krachttraining, mobiliteitsoefeningen en revalidatie. Met verschillende weerstandsniveaus kun je elke spiergroep effectief trainen.</p>
+            <img src="images/weerstandsbanden.jpg" alt="Weerstandsbanden" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-weerstandsbanden" class="cta-button">Bekijk Weerstandsbanden</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="kettlebells">
+            <h2>Kettlebells</h2>
+            <p>Geweldig voor dynamische kracht- en cardiotraining. Kettlebells combineren kracht en uithoudingsvermogen in functionele bewegingen, en nemen weinig ruimte in beslag.</p>
+            <img src="images/kettlebells.jpg" alt="Kettlebells" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-kettlebells" class="cta-button">Bekijk Kettlebells</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="loopband">
+            <h2>Loopband</h2>
+            <p>Wil je je conditie verbeteren? Een loopband is dé klassieker voor cardio thuis, waarmee je op elk moment kunt wandelen of hardlopen, ongeacht het weer buiten.</p>
+            <img src="images/loopband.jpg" alt="Loopband" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-loopband" class="cta-button">Bekijk Loopbanden</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="crosstrainer">
+            <h2>Crosstrainer</h2>
+            <p>Een low-impact cardio-optie die zowel je armen als benen traint. Crosstrainers zijn ideaal voor een full-body workout zonder je gewrichten te belasten.</p>
+            <img src="images/crosstrainer.jpg" alt="Crosstrainer" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-crosstrainer" class="cta-button">Bekijk Crosstrainers</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="hometrainer">
+            <h2>Hometrainer</h2>
+            <p>Een compacte en efficiënte manier om je uithoudingsvermogen te verbeteren. Hometrainers zijn geschikt voor bijna elk niveau en perfect voor in kleine ruimtes.</p>
+            <img src="images/hometrainer.jpg" alt="Hometrainer" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-hometrainer" class="cta-button">Bekijk Hometrainers</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="suspension-trainer">
+            <h2>Suspension Trainer (TRX)</h2>
+            <p>Met een TRX-systeem train je met je eigen lichaamsgewicht. Dit apparaat is licht, draagbaar en zeer veelzijdig, perfect voor kracht, stabiliteit en flexibiliteit.</p>
+            <img src="images/suspension-trainer.jpg" alt="Suspension Trainer (TRX)" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-suspension-trainer" class="cta-button">Bekijk Suspension Trainers</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="verstelbare-fitnessbank">
+            <h2>Verstelbare Fitnessbank</h2>
+            <p>Een fitnessbank maakt veel oefeningen mogelijk, van dumbbell presses tot core training. Een verstelbare variant biedt extra mogelijkheden en comfort.</p>
+            <img src="images/verstelbare-fitnessbank.jpg" alt="Verstelbare Fitnessbank" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-verstelbare-fitnessbank" class="cta-button">Bekijk Verstelbare Fitnessbanken</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="pull-up-bar">
+            <h2>Pull-up Bar</h2>
+            <p>Een klassieke tool om je bovenlichaam te versterken. Pull-up bars zijn betaalbaar, nemen weinig ruimte in en bieden talloze variaties voor een sterke rug en armen.</p>
+            <img src="images/pull-up-bar.jpg" alt="Pull-up Bar" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-pull-up-bar" class="cta-button">Bekijk Pull-up Bars</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="yogamat">
+            <h2>Yogamat</h2>
+            <p>Comfort en grip zijn essentieel voor stretching, yoga en floorworkouts. Een kwalitatieve yogamat zorgt voor de juiste ondergrond.</p>
+            <img src="images/yogamat.jpg" alt="Yogamat" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-yogamat" class="cta-button">Bekijk Yogamatten</a>
+            </div>
+        </section>
+
+        <section class="product-category" id="foam-roller">
+            <h2>Foam Roller</h2>
+            <p>Onmisbaar voor spierherstel en mobiliteit. Foam rollers helpen bij het losmaken van spierknopen en bevorderen het herstel na zware trainingen.</p>
+            <img src="images/foam-roller.jpg" alt="Foam Roller" loading="lazy" />
+            <div style="text-align:center; margin-top:10px;">
+                <a href="/jouw-link-foam-roller" class="cta-button">Bekijk Foam Rollers</a>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
