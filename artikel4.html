@@ -6,6 +6,52 @@
   <title>De Beste Thuisgym Opbouwen met een Klein Budget</title>
   <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
   <style>
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #f9fafb;
+      margin: 0;
+      padding: 0;
+      color: #1f2937;
+    }
+
+    .hero {
+      background: url('hero-image.jpg') center/cover no-repeat;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a.active {
+      color: #2563eb;
+    }
+
     .content-box {
       background: #ffffff;
       padding: 3rem 2rem;
@@ -60,16 +106,46 @@
     .cta-button:hover {
       background-color: #1e40af;
     }
+
+    .product-image {
+      display: block;
+      margin: 1.5rem auto;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    footer {
+      background-color: #f9fafb;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      .product-image {
+        width: 100%;
+        height: auto;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- Hero -->
   <div class="hero">
-    <div class="hero-overlay">
-      <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
-      <p>Ontdek betaalbare fitnessapparatuur die écht werkt.</p>
-    </div>
+    <h1>De Beste Thuisgym Opbouwen met een Klein Budget</h1>
+    <p>Ontdek betaalbare fitnessapparatuur die écht werkt.</p>
   </div>
 
   <!-- Navigatie -->
@@ -94,26 +170,32 @@
 
     <h3>Verstelbare Dumbbells</h3>
     <p>Met verstelbare dumbbells vervang je een hele set losse gewichten. Ze besparen ruimte en kosten op de lange termijn.</p>
+    <img src="verstelbare-dumbbells.jpg" alt="Verstelbare Dumbbells" class="product-image">
     <a href="verstelbare-dumbbells.html" class="cta-button">Bekijk Verstelbare Dumbbells</a>
 
     <h3>Weerstandsbanden</h3>
     <p>Ideaal voor warming-ups, mobiliteitsoefeningen en lichte krachttraining. Makkelijk op te bergen en veelzijdig in gebruik.</p>
+    <img src="weerstandsbanden.jpg" alt="Weerstandsbanden" class="product-image">
     <a href="weerstandsbanden.html" class="cta-button">Bekijk Weerstandsbanden</a>
 
     <h3>Fitnessbank</h3>
     <p>Onmisbaar voor bankdrukken, step-ups of buikspieroefeningen. Een verstelbare variant biedt extra mogelijkheden en comfort.</p>
+    <img src="fitnessbank.jpg" alt="Fitnessbank" class="product-image">
     <a href="verstelbare-fitnessbank.html" class="cta-button">Bekijk Fitnessbanken</a>
 
     <h3>Pull-up Bar</h3>
     <p>Versterk je rug, armen en core met deze compacte klassieker. Eenvoudig te bevestigen aan een deurpost of muur.</p>
+    <img src="pull-up-bar.jpg" alt="Pull-up Bar" class="product-image">
     <a href="pull-up-bar.html" class="cta-button">Bekijk Pull-up Bars</a>
 
     <h3>Yogamat</h3>
     <p>Essentieel voor comfort tijdens stretching, yoga en core-training. Kies voor een dikke mat met goede grip.</p>
+    <img src="yogamat.jpg" alt="Yogamat" class="product-image">
     <a href="yogamat.html" class="cta-button">Bekijk Yogamatten</a>
 
     <h3>Foam Roller</h3>
     <p>Stimuleert spierherstel, vermindert stijfheid en verbetert mobiliteit. Onmisbaar na een zware training.</p>
+    <img src="foam-roller.jpg" alt="Foam Roller" class="product-image">
     <a href="foam-roller.html" class="cta-button">Bekijk Foam Rollers</a>
 
     <h2>3. Slimme Tips om je Budget te Maximaliseren</h2>
