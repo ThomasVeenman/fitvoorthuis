@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitVoorThuis – Top fitnessproducten voor thuisgebruik</title>
+  <meta name="description" content="Bekijk de best beoordeelde fitnessproducten voor thuisgebruik. Geselecteerd op reviews, betrouwbaar en efficiënt." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FitVoorThuis – Fitness voor thuis" />
+  <meta property="og:description" content="Top beoordeelde fitnessproducten voor thuisgebruik, gebaseerd op Bol.com reviews." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:url" content="https://www.fitvoorthuis.nl" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 250px;
+      z-index: 1000;
+      flex-direction: column;
+      padding: 0.5rem 0;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+      text-transform: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #000;
+      padding: 1rem;
+    }
+    .mobile-nav a {
+      color: white;
+      padding: 0.5rem 0;
+      text-transform: none;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .mobile-nav.show {
+        display: flex;
+      }
+    }
+  </style>
+  <script>
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Hero sectie -->
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>Welkom bij FitVoorThuis</h1>
+      <p>Ontdek de beste fitnessproducten en artikelen voor jouw thuisgym.</p>
+      <a href="#artikelen" class="cta-button">Bekijk de beste fitnessproducten</a>
+    </div>
+  </div>
+
+  <!-- Hamburger menu voor mobiel -->
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Desktop Navigatie -->
+  <nav>
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <a href="#">Producten ▾</a>
+      <div class="dropdown-content">
+        <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
+        <a href="weerstandsbanden.html">Weerstandsbanden</a>
+        <a href="kettlebells.html">Kettlebells</a>
+        <a href="loopbanden.html">Loopbanden</a>
+        <a href="crosstrainers.html">Crosstrainers</a>
+        <a href="hometrainers.html">Hometrainers</a>
+        <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
+        <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+        <a href="pullup-bars.html">Pull-up Bars</a>
+        <a href="yogamatten.html">Yogamatten</a>
+        <a href="foamrollers.html">Foam Rollers</a>
+        <a href="massageguns.html">Massage Guns</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Oefeningen ▾</a>
+      <div class="dropdown-content">
+        <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
+        <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
+        <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
+        <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+        <a href="oefeningen-core.html">Core & Stabiliteit</a>
+        <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+        <a href="oefeningen-yoga.html">Yoga & Stretching</a>
+      </div>
+    </div>
+    <a href="#artikelen">Artikelen</a>
+    <a href="#uitleg">Over ons</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Mobiele Navigatie -->
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="index.html">Home</a>
+    <strong>Producten</strong>
+    <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
+    <a href="weerstandsbanden.html">Weerstandsbanden</a>
+    <a href="kettlebells.html">Kettlebells</a>
+    <a href="loopbanden.html">Loopbanden</a>
+    <a href="crosstrainers.html">Crosstrainers</a>
+    <a href="hometrainers.html">Hometrainers</a>
+    <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
+    <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+    <a href="pullup-bars.html">Pull-up Bars</a>
+    <a href="yogamatten.html">Yogamatten</a>
+    <a href="foamrollers.html">Foam Rollers</a>
+    <a href="massageguns.html">Massage Guns</a>
+    <strong>Oefeningen</strong>
+    <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
+    <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
+    <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
+    <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+    <a href="oefeningen-core.html">Core & Stabiliteit</a>
+    <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+    <a href="oefeningen-yoga.html">Yoga & Stretching</a>
+    <a href="#artikelen">Artikelen</a>
+    <a href="#uitleg">Over ons</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+</nav>
+
+  <!-- Privacy sectie-->
+<section class="content-box">
+  <h2>Privacyverklaring</h2>
+  <p>FitVoorThuis.nl ("wij", "ons", "onze") neemt jouw privacy serieus en verwerkt jouw persoonsgegevens zorgvuldig en in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG).</p>
+
+  <h3>1. Wie is verantwoordelijk voor de verwerking van jouw gegevens?</h3>
+  <p>FitVoorThuis.nl<br>
+  E-mail: <a href="mailto:privacy@fitvoorthuis.nl">privacy@fitvoorthuis.nl</a> (indien beschikbaar)</p>
+  <p><em>Let op:</em> Momenteel is er geen bedrijfsadres beschikbaar. Wij raden aan om dit in de toekomst toe te voegen zodra mogelijk.</p>
+
+  <h3>2. Welke persoonsgegevens verzamelen wij?</h3>
+  <p>Wij verzamelen de volgende gegevens:</p>
+  <ul>
+    <li>IP-adres</li>
+    <li>Gebruik van de website (zoals klikgedrag en bezochte pagina’s)</li>
+    <li>Cookies en trackinggegevens, inclusief affiliate tracking cookies</li>
+  </ul>
+
+  <h3>3. Waarom verzamelen wij deze gegevens?</h3>
+  <p>Deze gegevens worden gebruikt om:</p>
+  <ul>
+    <li>De website te verbeteren en te analyseren</li>
+    <li>Relevante content en advertenties te tonen</li>
+    <li>Affiliate links te kunnen volgen, zodat wij commissies kunnen ontvangen bij aankopen via onze links</li>
+  </ul>
+
+  <h3>4. Met wie delen wij jouw gegevens?</h3>
+  <p>Wij delen jouw gegevens met:</p>
+  <ul>
+    <li>Onze hostingprovider</li>
+    <li>Affiliate netwerken en partners (deze worden later toegevoegd)</li>
+    <li>Analyse- en trackingtools (zoals Google Analytics indien toegepast)</li>
+  </ul>
+
+  <h3>5. Hoe lang bewaren wij jouw gegevens?</h3>
+  <p>Wij bewaren persoonsgegevens niet langer dan noodzakelijk is voor de genoemde doeleinden, tenzij de wet anders voorschrijft.</p>
+
+  <h3>6. Jouw rechten</h3>
+  <p>Je hebt recht op:</p>
+  <ul>
+    <li>Inzage in jouw gegevens</li>
+    <li>Correctie van onjuiste gegevens</li>
+    <li>Verwijdering van gegevens, voor zover wettelijk toegestaan</li>
+    <li>Beperking van de verwerking</li>
+    <li>Bezwaar tegen verwerking</li>
+    <li>Overdraagbaarheid van gegevens</li>
+  </ul>
+  <p>Voor vragen of verzoeken kun je contact opnemen via het genoemde e-mailadres zodra dit beschikbaar is.</p>
+
+  <h3>7. Cookies en tracking</h3>
+  <p>We gebruiken cookies voor:</p>
+  <ul>
+    <li>Noodzakelijke functionaliteit van de website</li>
+    <li>Analysetools</li>
+    <li>Affiliate tracking</li>
+  </ul>
+  <p>Je kunt jouw cookievoorkeuren beheren via onze cookiebanner.</p>
+
+  <h3>8. Beveiliging</h3>
+  <p>Wij nemen passende maatregelen om jouw gegevens te beschermen tegen verlies en onbevoegde toegang.</p>
+
+  <h3>9. Klachten</h3>
+  <p>Heb je een klacht over de verwerking van jouw persoonsgegevens? Neem dan contact met ons op zodra het e-mailadres beschikbaar is. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens: <a href="https://autoriteitpersoonsgegevens.nl" target="_blank" rel="noopener">autoriteitpersoonsgegevens.nl</a>.</p>
+
+  <h3>10. Wijzigingen in deze verklaring</h3>
+  <p>Wij kunnen deze privacyverklaring aanpassen. We adviseren deze pagina regelmatig te controleren.</p>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 FitVoorThuis.nl – Alle rechten voorbehouden.</p>
+    <p><em>Disclaimer:</em> Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
+  </footer>
+
+</body>
+</html>
