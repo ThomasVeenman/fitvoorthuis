@@ -276,14 +276,7 @@ nav a.active {
 /* =========================================
    Footer
    ========================================= */
-footer {
-  background: #f1f1f1;
-  color: #444;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.875rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
-}
+
 
 /* =========================================
    Responsiveness (mobiel)
