@@ -92,23 +92,79 @@
       text-decoration: underline;
     }
 
-    /* Nieuwe stijl voor call to action knoppen */
+    /* Content spacing and typography */
+    .content-box {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .content-box h2 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #2a7a4a;
+    }
+
+    .content-box h3 {
+      margin-top: 1.75rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+      font-size: 1.3rem;
+      color: #1f5d33;
+    }
+
+    .content-box p {
+      margin-bottom: 1.25rem;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    /* CTA Buttons */
     .cta-button {
       display: inline-block;
-      background-color: #4CAF50;
-      color: white !important;
-      padding: 0.6rem 1.2rem;
-      margin-top: 1rem;
-      border-radius: 6px;
-      text-decoration: none;
+      background-color: #2a7a4a;
+      color: #fff;
       font-weight: 600;
-      transition: background-color 0.3s ease;
-      font-size: 1rem;
+      font-size: 1.05rem;
+      padding: 0.75rem 1.8rem;
+      border-radius: 35px;
+      box-shadow: 0 4px 12px rgba(42,122,74,0.35);
+      text-decoration: none;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      margin: 1.25rem auto 2rem;
+      cursor: pointer;
+      text-align: center;
+      width: fit-content;
     }
+
     .cta-button:hover,
     .cta-button:focus {
-      background-color: #45a049;
+      background-color: #1e5630;
+      box-shadow: 0 6px 18px rgba(30,86,48,0.6);
       outline: none;
+    }
+
+    /* Center buttons horizontally */
+    .product-tekst {
+      text-align: center;
+    }
+
+    /* Image adjustments for elegance */
+    .product-tekst img {
+      margin: 1rem auto 1.75rem;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
   </style>
   <script>
@@ -223,64 +279,54 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- Artikel -->
+  <!-- Hoofdinhoud -->
   <section class="content-box">
-    <h2>De 5 Beste Thuisfitnessproducten volgens Klanten</h2>
-    <p>Gebaseerd op gebruikerservaringen, populariteit en prestaties, zijn dit de vijf topproducten voor jouw thuisgym.</p>
-    
-    <div class="product-blok">
-      <div class="product-tekst">
-        <h3>1. Verstelbare Dumbbells</h3>
-        <p>Perfect voor krachttraining zonder een rek vol gewichten. Eenvoudig in te stellen, compact en ideaal voor elke ruimte.</p>
-        <img src="verstelbare dumbbells.png" style="width:300px; height:300px; display:block; margin:0 auto; border-radius:12px;" alt="Verstelbare Dumbbells">
-        <a class="cta-button" href="#">➡️ Bekijk onze topkeuzes</a>
-      </div>
+
+    <h2>De 5 beste fitnessapparaten voor thuis in 2025 (getest)</h2>
+
+    <p>We hebben de best beoordeelde fitnessproducten geselecteerd op basis van de meest recente reviews van Bol.com. De topkeuzes combineren kwaliteit, betrouwbaarheid en goede prijs-kwaliteitverhouding.</p>
+
+    <h3>1. Verstelbare Dumbbells</h3>
+    <div class="product-tekst">
+      <img src="verstelbare-dumbbells.jpg" alt="Verstelbare Dumbbells" />
+      <p>Met verstelbare dumbbells train je verschillende spiergroepen zonder een hele set losse gewichten te kopen. Perfect voor thuis.</p>
+      <a class="cta-button" href="https://www.fitvoorthuis.nl/verstelbare-dumbbells">➡️ Bekijk alle verstelbare dumbbells</a>
     </div>
 
-    <div class="product-blok">
-      <div class="product-tekst">
-        <h3>2. Loopband</h3>
-        <p>Cardio zonder naar buiten te hoeven. Stil, opvouwbaar en voorzien van trainingsprogramma’s. Ideaal voor dagelijks gebruik.</p>
-        <img src="loopband.png" style="width:300px; height:300px; display:block; margin:0 auto; border-radius:12px;" alt="Loopband">
-        <a class="cta-button" href="#">➡️ Bekijk de beste modellen</a>
-      </div>
+    <h3>2. Weerstandsbanden</h3>
+    <div class="product-tekst">
+      <img src="weerstandsbanden.jpg" alt="Weerstandsbanden" />
+      <p>Ideaal voor spierversterking en revalidatie. Compact en makkelijk mee te nemen.</p>
+      <a class="cta-button" href="https://www.fitvoorthuis.nl/weerstandsbanden">➡️ Bekijk alle weerstandsbanden</a>
     </div>
 
-    <div class="product-blok">
-      <div class="product-tekst">
-        <h3>3. Suspension Trainer (TRX)</h3>
-        <p>Voor een full-body workout met je eigen lichaamsgewicht. Compact, mobiel en zeer effectief voor core en kracht.</p>
-        <img src="suspension trainer(TRX).png" style="width:300px; height:300px; display:block; margin:0 auto; border-radius:12px;" alt="Suspension Trainer">
-        <a class="cta-button" href="#">➡️ Bekijk onze aanraders</a>
-      </div>
+    <h3>3. Kettlebells</h3>
+    <div class="product-tekst">
+      <img src="kettlebells.jpg" alt="Kettlebells" />
+      <p>Kracht en cardio in één. Uitstekend voor dynamische full-body workouts.</p>
+      <a class="cta-button" href="https://www.fitvoorthuis.nl/kettlebells">➡️ Bekijk alle kettlebells</a>
     </div>
 
-    <div class="product-blok">
-      <div class="product-tekst">
-        <h3>4. Foam Roller</h3>
-        <p>Herstel sneller en train slimmer. Verlicht spierpijn en activeer je spieren voor of na je sessie.</p>
-        <img src="foamroller.png" style="width:300px; height:300px; display:block; margin:0 auto; border-radius:12px;" alt="Foam Roller">
-        <a class="cta-button" href="#">➡️ Bekijk de beste opties</a>
-      </div>
+    <h3>4. Loopbanden</h3>
+    <div class="product-tekst">
+      <img src="loopbanden.jpg" alt="Loopbanden" />
+      <p>Voor wandelen, joggen en hardlopen binnen, ongeacht het weer buiten.</p>
+      <a class="cta-button" href="https://www.fitvoorthuis.nl/loopbanden">➡️ Bekijk alle loopbanden</a>
     </div>
 
-    <div class="product-blok">
-      <div class="product-tekst">
-        <h3>5. Weerstandsbanden</h3>
-        <p>Veelzijdig, goedkoop en ruimtebesparend. Ideaal voor beginners, warming-up of revalidatie.</p>
-        <img src="weerstandsbanden.png" style="width:300px; height:300px; display:block; margin:0 auto; border-radius:12px;" alt="Weerstandsbanden">
-        <a class="cta-button" href="#">➡️ Bekijk onze selectie</a>
-      </div>
+    <h3>5. Suspension Trainers (TRX)</h3>
+    <div class="product-tekst">
+      <img src="suspension-trainer-TRX.png" alt="Suspension Trainer TRX" />
+      <p>Functionele training met eigen lichaamsgewicht, geschikt voor alle niveaus.</p>
+      <a class="cta-button" href="https://www.fitvoorthuis.nl/suspension-trainers">➡️ Bekijk alle suspension trainers (TRX)</a>
     </div>
 
-    <h2>Start vandaag met jouw ideale training</h2>
-    <p><strong>FitVoorThuis.nl</strong> helpt je met eerlijke info, praktische tips en de beste thuisfitnessproducten. Slimmer trainen begint bij goede keuzes.</p>
-
-    <p><strong>Investeer vandaag nog in je gezondheid, kracht en vrijheid — gewoon vanuit huis.</strong></p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>© 2025 FitVoorThuis. Alle rechten voorbehouden. | <a href="privacy.html" aria-current="page">Privacyverklaring</a> | <a href="contact.html">Contact</a></p>
-    <p style="color: #888; margin-top: 0.5rem;">Disclaimer: Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
-  </footer
+    <p>© 2025 FitVoorThuis.nl – Alle rechten voorbehouden.</p>
+    <p><a href="#contact">Contact</a> | <a href="#privacy">Privacybeleid</a></p>
+  </footer>
+
+</body>
+</html>
