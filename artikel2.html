@@ -75,7 +75,7 @@
       }
     }
 
-     footer {
+    footer {
       background-color: #111;
       color: #ccc;
       padding: 2rem 1rem;
@@ -91,7 +91,55 @@
     footer a:hover {
       text-decoration: underline;
     }
-    
+
+    /* Nieuwe styling voor artikel en afbeeldingen */
+    .content-box {
+      background: white;
+      padding: 2rem 1.5rem;
+      max-width: 800px;
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+    .content-box h2,
+    .content-box h3 {
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      color: #004d40;
+    }
+    .content-box p {
+      margin: 0 0 1.5rem 0;
+      font-size: 1rem;
+      color: #333;
+    }
+    .content-box a {
+      color: #00796b;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .content-box a:hover {
+      text-decoration: underline;
+    }
+    .content-box img {
+      max-width: 250px;
+      height: auto;
+      display: block;
+      margin: 1.5rem auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .product-blok {
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 480px) {
+      .content-box img {
+        max-width: 100%;
+      }
+    }
   </style>
   <script>
     function toggleMobileNav() {
@@ -102,7 +150,7 @@
 </head>
 <body>
 
-    <!-- Hero bovenaan -->
+  <!-- Hero bovenaan -->
   <div class="hero">
     <div class="hero-overlay">
       <h1>Waarom Thuisfitness De Nieuwe Norm Is</h1>
@@ -117,158 +165,147 @@
     <div></div>
   </div>
 
-<!-- Desktop Navigatie -->
-<nav>
-  <a href="index.html">Home</a>
+  <!-- Desktop Navigatie -->
+  <nav>
+    <a href="index.html">Home</a>
 
-  <div class="dropdown">
-    <a href="#">Producten ▾</a>
-    <div class="dropdown-content">
-      <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
-      <a href="weerstandsbanden.html">Weerstandsbanden</a>
-      <a href="kettlebells.html">Kettlebells</a>
-      <a href="loopbanden.html">Loopbanden</a>
-      <a href="crosstrainers.html">Crosstrainers</a>
-      <a href="hometrainers.html">Hometrainers</a>
-      <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
-      <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
-      <a href="pullup-bars.html">Pull-up Bars</a>
-      <a href="yogamatten.html">Yogamatten</a>
-      <a href="foamrollers.html">Foam Rollers</a>
-      <a href="massageguns.html">Massage Guns</a>
+    <div class="dropdown">
+      <a href="#">Producten ▾</a>
+      <div class="dropdown-content">
+        <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
+        <a href="weerstandsbanden.html">Weerstandsbanden</a>
+        <a href="kettlebells.html">Kettlebells</a>
+        <a href="loopbanden.html">Loopbanden</a>
+        <a href="crosstrainers.html">Crosstrainers</a>
+        <a href="hometrainers.html">Hometrainers</a>
+        <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
+        <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+        <a href="pullup-bars.html">Pull-up Bars</a>
+        <a href="yogamatten.html">Yogamatten</a>
+        <a href="foamrollers.html">Foam Rollers</a>
+        <a href="massageguns.html">Massage Guns</a>
+      </div>
     </div>
+
+    <div class="dropdown">
+      <a href="#">Oefeningen ▾</a>
+      <div class="dropdown-content">
+        <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
+        <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
+        <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
+        <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+        <a href="oefeningen-core.html">Core & Stabiliteit</a>
+        <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+        <a href="oefeningen-yoga.html">Yoga & Stretching</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <a href="#">Artikelen ▾</a>
+      <div class="dropdown-content">
+        <a href="artikel1.html">Waarom thuis trainen populairder is</a>
+        <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
+        <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
+        <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
+        <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
+      </div>
+    </div>
+
+    <a href="#uitleg">Over ons</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Mobiele Navigatie -->
+  <div id="mobile-nav" class="mobile-nav">
+    <a href="index.html">Home</a>
+
+    <strong>Producten</strong>
+    <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
+    <a href="weerstandsbanden.html">Weerstandsbanden</a>
+    <a href="kettlebells.html">Kettlebells</a>
+    <a href="loopbanden.html">Loopbanden</a>
+    <a href="crosstrainers.html">Crosstrainers</a>
+    <a href="hometrainers.html">Hometrainers</a>
+    <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
+    <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+    <a href="pullup-bars.html">Pull-up Bars</a>
+    <a href="yogamatten.html">Yogamatten</a>
+    <a href="foamrollers.html">Foam Rollers</a>
+    <a href="massageguns.html">Massage Guns</a>
+
+    <strong>Oefeningen</strong>
+    <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
+    <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
+    <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
+    <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+    <a href="oefeningen-core.html">Core & Stabiliteit</a>
+    <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+    <a href="oefeningen-yoga.html">Yoga & Stretching</a>
+
+    <strong>Artikelen</strong>
+    <a href="artikel1.html">Waarom thuis trainen populairder is</a>
+    <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
+    <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
+    <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
+    <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
+
+    <a href="#uitleg">Over ons</a>
+    <a href="#contact">Contact</a>
   </div>
 
-  <div class="dropdown">
-    <a href="#">Oefeningen ▾</a>
-    <div class="dropdown-content">
-      <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
-      <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
-      <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
-      <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
-      <a href="oefeningen-core.html">Core & Stabiliteit</a>
-      <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
-      <a href="oefeningen-yoga.html">Yoga & Stretching</a>
-    </div>
-  </div>
-
-  <div class="dropdown">
-    <a href="#">Artikelen ▾</a>
-    <div class="dropdown-content">
-      <a href="artikel1.html">Waarom thuis trainen populairder is</a>
-      <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
-      <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
-      <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
-      <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
-    </div>
-  </div>
-
-  <a href="#uitleg">Over ons</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<!-- Mobiele Navigatie -->
-<div id="mobile-nav" class="mobile-nav">
-  <a href="index.html">Home</a>
-
-  <strong>Producten</strong>
-  <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
-  <a href="weerstandsbanden.html">Weerstandsbanden</a>
-  <a href="kettlebells.html">Kettlebells</a>
-  <a href="loopbanden.html">Loopbanden</a>
-  <a href="crosstrainers.html">Crosstrainers</a>
-  <a href="hometrainers.html">Hometrainers</a>
-  <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
-  <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
-  <a href="pullup-bars.html">Pull-up Bars</a>
-  <a href="yogamatten.html">Yogamatten</a>
-  <a href="foamrollers.html">Foam Rollers</a>
-  <a href="massageguns.html">Massage Guns</a>
-
-  <strong>Oefeningen</strong>
-  <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
-  <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
-  <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
-  <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
-  <a href="oefeningen-core.html">Core & Stabiliteit</a>
-  <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
-  <a href="oefeningen-yoga.html">Yoga & Stretching</a>
-
-  <strong>Artikelen</strong>
-  <a href="artikel1.html">Waarom thuis trainen populairder is</a>
-  <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
-  <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
-  <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
-  <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
-
-  <a href="#uitleg">Over ons</a>
-  <a href="#contact">Contact</a>
-</div>
-
-
-    </nav>
-  </header>
   <!-- Artikel -->
   <section class="content-box">
     <h2>De 5 Beste Thuisfitnessproducten volgens Klanten</h2>
     <p>Gebaseerd op gebruikerservaringen, populariteit en prestaties, zijn dit de vijf topproducten voor jouw thuisgym.</p>
     <div class="product-blok">
-           <div class="product-tekst">
+      <div class="product-tekst">
         <h3>1. Verstelbare Dumbbells</h3>
         <p>Perfect voor krachttraining zonder een rek vol gewichten. Eenvoudig in te stellen, compact en ideaal voor elke ruimte.</p>
-              <img src="verstelbare dumbbells.png" style="width:300px; height:300px; display:block; margin:0 auto;" alt="Verstelbare Dumbbells">
+        <img src="verstelbare dumbbells.png" alt="Verstelbare Dumbbells" />
         <a href="#">Bekijk onze topkeuzes →</a>
       </div>
     </div>
 
     <div class="product-blok">
-           <div class="product-tekst">
+      <div class="product-tekst">
         <h3>2. Loopband</h3>
         <p>Cardio zonder naar buiten te hoeven. Stil, opvouwbaar en voorzien van trainingsprogramma’s. Ideaal voor dagelijks gebruik.</p>
-              <img src="loopband.png" style="width:300px; height:300px; display:block; margin:0 auto;"alt="Loopband">
+        <img src="loopband.png" alt="Loopband" />
         <a href="#">Bekijk de beste modellen →</a>
       </div>
     </div>
 
     <div class="product-blok">
-            <div class="product-tekst">
+      <div class="product-tekst">
         <h3>3. Suspension Trainer (TRX)</h3>
-        <p>Voor een full-body workout met je eigen lichaamsgewicht. Compact, mobiel en zeer effectief voor core en kracht.</p
-          <img src="suspension trainer(TRX).png" style="width:300px; height:300px; display:block; margin:0 auto;" alt="Suspension Trainer">                                                                                                                  
+        <p>Voor een full-body workout met je eigen lichaamsgewicht. Compact, mobiel en zeer effectief voor core en kracht.</p>
+        <img src="suspension trainer(TRX).png" alt="Suspension Trainer" />
         <a href="#">Bekijk onze aanraders →</a>
       </div>
     </div>
 
     <div class="product-blok">
-           <div class="product-tekst">
+      <div class="product-tekst">
         <h3>4. Foam Roller</h3>
         <p>Herstel sneller en train slimmer. Verlicht spierpijn en activeer je spieren voor of na je sessie.</p>
-         <img src="foamroller.png" style="width:300px; height:300px; display:block; margin:0 auto;"alt="Foam Rollern">
-             <a href="#">Bekijk de beste opties →</a>
+        <img src="foamroller.png" alt="Foam Roller" />
+        <a href="#">Bekijk de beste opties →</a>
       </div>
     </div>
 
     <div class="product-blok">
-          <div class="product-tekst">
+      <div class="product-tekst">
         <h3>5. Weerstandsbanden</h3>
         <p>Veelzijdig, goedkoop en ruimtebesparend. Ideaal voor beginners, warming-up of revalidatie.</p>
-              <img src="weerstandsbanden.png" style="width:300px; height:300px; display:block; margin:0 auto;"alt="Weerstandsbanden">
-        <a href="#">Bekijk onze selectie →</a>
+        <img src="weerstandsbanden.png" alt="Weerstandsbanden" />
+        <a href="#">Ontdek onze favorieten →</a>
       </div>
     </div>
-
-    <h2>Start vandaag met jouw ideale training</h2>
-    <p><strong>FitVoorThuis.nl</strong> helpt je met eerlijke info, praktische tips en de beste thuisfitnessproducten. Slimmer trainen begint bij goede keuzes.</p>
-
-    <p><strong>Investeer vandaag nog in je gezondheid, kracht en vrijheid — gewoon vanuit huis.</strong></p>
   </section>
 
-  <!-- Footer -->
-<!-- Footer -->
-<footer>
-  <p>© 2025 FitVoorThuis. Alle rechten voorbehouden. | <a href="privacy.html" aria-current="page">Privacyverklaring</a> | <a href="contact.html">Contact</a></p>
-  <p style="color: #888; margin-top: 0.5rem;">Disclaimer: Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
-</footer>
+  <footer>
+    <p>© 2025 FitVoorThuis - Alle rechten voorbehouden | <a href="privacybeleid.html">Privacybeleid</a> | <a href="contact.html">Contact</a></p>
+  </footer>
 
 </body>
 </html>
