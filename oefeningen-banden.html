@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitVoorThuis – Effectieve oefeningen met weerstandsbanden – Thuis trainen zonder apparatuur</title>
+  <meta name="description" content="Bekijk de best beoordeelde fitnessproducten voor thuisgebruik. Geselecteerd op reviews, betrouwbaar en efficiënt." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FitVoorThuis – Fitness voor thuis" />
+  <meta property="og:description" content="Top beoordeelde fitnessproducten voor thuisgebruik, gebaseerd op Bol.com reviews." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:url" content="https://www.fitvoorthuis.nl" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .dropdown {
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 250px;
+      z-index: 1000;
+      flex-direction: column;
+      padding: 0.5rem 0;
+    }
+    .dropdown-content a {
+      color: #fff;
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+      text-transform: none;
+    }
+    .dropdown:hover .dropdown-content {
+      display: flex;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+    }
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #000;
+      padding: 1rem;
+    }
+    .mobile-nav a {
+      color: white;
+      padding: 0.5rem 0;
+      text-transform: none;
+    }
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .mobile-nav.show {
+        display: flex;
+      }
+    }
+
+     footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    
+  </style>
+  <script>
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('show');
+    }
+  </script>
+</head>
+<body>
+
+    <!-- Hero bovenaan -->
+  <div class="hero">
+    <div class="hero-overlay">
+      <h1>Train krachtig en veelzijdig met weerstandsbanden</h1>
+      <p>Ontdek de beste oefeningen voor elke spiergroep, eenvoudig thuis uit te voeren</p>
+    </div>
+  </div>
+
+  <!-- Hamburger menu voor mobiel -->
+  <div class="hamburger" onclick="toggleMobileNav()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+<!-- Desktop Navigatie -->
+<nav>
+  <a href="index.html">Home</a>
+
+  <div class="dropdown">
+    <a href="#">Producten ▾</a>
+    <div class="dropdown-content">
+      <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
+      <a href="weerstandsbanden.html">Weerstandsbanden</a>
+      <a href="kettlebells.html">Kettlebells</a>
+      <a href="loopbanden.html">Loopbanden</a>
+      <a href="crosstrainers.html">Crosstrainers</a>
+      <a href="hometrainers.html">Hometrainers</a>
+      <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
+      <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+      <a href="pullup-bars.html">Pull-up Bars</a>
+      <a href="yogamatten.html">Yogamatten</a>
+      <a href="foamrollers.html">Foam Rollers</a>
+      <a href="massageguns.html">Massage Guns</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#">Oefeningen ▾</a>
+    <div class="dropdown-content">
+      <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
+      <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
+      <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
+      <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+      <a href="oefeningen-core.html">Core & Stabiliteit</a>
+      <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+      <a href="oefeningen-yoga.html">Yoga & Stretching</a>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <a href="#">Artikelen ▾</a>
+    <div class="dropdown-content">
+      <a href="artikel1.html">Waarom thuis trainen populairder is</a>
+      <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
+      <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
+      <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
+      <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
+    </div>
+  </div>
+
+  <a href="#uitleg">Over ons</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Mobiele Navigatie -->
+<div id="mobile-nav" class="mobile-nav">
+  <a href="index.html">Home</a>
+
+  <strong>Producten</strong>
+  <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
+  <a href="weerstandsbanden.html">Weerstandsbanden</a>
+  <a href="kettlebells.html">Kettlebells</a>
+  <a href="loopbanden.html">Loopbanden</a>
+  <a href="crosstrainers.html">Crosstrainers</a>
+  <a href="hometrainers.html">Hometrainers</a>
+  <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
+  <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+  <a href="pullup-bars.html">Pull-up Bars</a>
+  <a href="yogamatten.html">Yogamatten</a>
+  <a href="foamrollers.html">Foam Rollers</a>
+  <a href="massageguns.html">Massage Guns</a>
+
+  <strong>Oefeningen</strong>
+  <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
+  <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
+  <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
+  <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+  <a href="oefeningen-core.html">Core & Stabiliteit</a>
+  <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+  <a href="oefeningen-yoga.html">Yoga & Stretching</a>
+
+  <strong>Artikelen</strong>
+  <a href="artikel1.html">Waarom thuis trainen populairder is</a>
+  <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
+  <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
+  <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
+  <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
+
+  <a href="#uitleg">Over ons</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+    </nav>
+  </header>
+
+  <!-- Artikel -->
+<!-- Artikel -->
+<section class="content-box">
+  <div class="artikel-inhoud">
+    <h1>De beste weerstandsband-oefeningen per spiergroep</h1>
+    <p>Hieronder vind je een onderbouwde selectie van effectieve oefeningen met weerstandsbanden, gebaseerd op trainingswetenschap en toepasbaarheid voor thuis.</p>
+
+    <h2>💪 Borst: Weerstandsband Chest Press</h2>
+    <p><strong>Uitvoering:</strong> Bevestig de band achter je, houd de handvatten vast en duw de armen recht vooruit.</p>
+    <p><strong>Spieren:</strong> Grote borstspier (pectoralis major), triceps, schouders.</p>
+    <p><strong>Waarom goed:</strong> Veilig en effectief alternatief voor push-ups en dumbbell presses.</p>
+
+    <h2>💪 Schouders: Weerstandsband Shoulder Press</h2>
+    <p><strong>Uitvoering:</strong> Stap op de band, houd de handvatten op schouderhoogte en duw omhoog.</p>
+    <p><strong>Spieren:</strong> Deltoids, triceps.</p>
+    <p><strong>Tip:</strong> Houd je rug recht en beweeg gecontroleerd.</p>
+
+    <h2>💪 Rug: Weerstandsband Seated Row</h2>
+    <p><strong>Uitvoering:</strong> Zit met gestrekte benen, wikkel de band om je voeten en trek de handvatten naar je toe.</p>
+    <p><strong>Spieren:</strong> Latissimus dorsi, rompstabilisatie.</p>
+    <p><strong>Voordeel:</strong> Effectief voor rugspieren zonder apparatuur.</p>
+
+    <h2>💪 Biceps: Weerstandsband Bicep Curl</h2>
+    <p><strong>Uitvoering:</strong> Stap op de band en buig de armen, houd spanning op de biceps.</p>
+    <p><strong>Tip:</strong> Beweeg gecontroleerd zonder te zwaaien.</p>
+
+    <h2>💪 Triceps: Weerstandsband Overhead Extension</h2>
+    <p><strong>Uitvoering:</strong> Houd de band achter je hoofd en strek de armen omhoog.</p>
+    <p><strong>Spieren:</strong> Triceps.</p>
+    <p><strong>Waarom effectief:</strong> Isolatie van de triceps, ook zonder zware gewichten.</p>
+
+    <h2>🦵 Benen: Weerstandsband Squat</h2>
+    <p><strong>Uitvoering:</strong> Stap op de band, houd het handvat vast en zak door je knieën.</p>
+    <p><strong>Spieren:</strong> Bovenbenen, billen, core.</p>
+    <p><strong>Waarom thuisvriendelijk:</strong> Geen apparatuur nodig, gemakkelijk aan te passen in intensiteit.</p>
+
+    <h2>🦵 Hamstrings & Billen: Weerstandsband Glute Kickback</h2>
+    <p><strong>Uitvoering:</strong> Bevestig de band rond je enkels en trap één been naar achteren.</p>
+    <p><strong>Spieren:</strong> Bilspieren, hamstrings.</p>
+
+    <h2>🧱 Core: Weerstandsband Russian Twist</h2>
+    <p><strong>Uitvoering:</strong> Zit, houd de band strak en draai je romp van links naar rechts.</p>
+    <p><strong>Spieren:</strong> Schuine buikspieren, core-stabiliteit.</p>
+
+    <h3>Tips voor optimaal resultaat</h3>
+    <ul>
+      <li>✅ Kies een band met passende weerstand voor jouw niveau.</li>
+      <li>✅ Train 2–4 keer per week voor spieropbouw.</li>
+      <li>✅ Combineer met voldoende eiwitten en rust voor herstel.</li>
+      <li>✅ Begin met 2–3 sets van 8–15 herhalingen per oefening.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 FitVoorThuis. Alle rechten voorbehouden. | <a href="privacy.html" aria-current="page">Privacy & Cookies</a> | <a href="contact.html">Contact</a></p>
+  <p style="color: #888; margin-top: 0.5rem;">Disclaimer: Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
+</footer>
+<!-- Cookie banner HTML + CSS -->
+<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:15px;text-align:center;z-index:10000;">
+  <span>Deze website gebruikt cookies voor analyse en affiliate tracking. Klik op “Accepteren” om toestemming te geven.</span>
+  <button id="accept-cookies" style="margin-left:10px;padding:8px 15px;background:#4CAF50;color:#fff;border:none;cursor:pointer;">Accepteren</button>
+  <a href="/privacy" style="color:#4CAF50;margin-left:15px;text-decoration:underline;">Privacyverklaring</a>
+</div>
+
+<script>
+  // Functie om scripts pas te laden na toestemming
+  function loadTrackingScripts() {
+    // Voorbeeld: Google Analytics
+    var gaScript = document.createElement('script');
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X';
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXXX-X');
+    }
+
+    // Voeg hier je affiliate tracking scripts toe als nodig
+    // Bijvoorbeeld:
+    // var affScript = document.createElement('script');
+    // affScript.src = 'https://affiliatepartner.com/tracking.js';
+    // document.head.appendChild(affScript);
+  }
+
+  // Check of cookies al geaccepteerd zijn
+  function hasConsent() {
+    return localStorage.getItem('cookiesAccepted') === 'true';
+  }
+
+  // Banner verbergen en scripts laden bij acceptatie
+  document.getElementById('accept-cookies').onclick = function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+    loadTrackingScripts();
+  }
+
+  // Bij pagina laden banner tonen of verbergen en scripts laden indien toestemming
+  window.onload = function() {
+    if (hasConsent()) {
+      document.getElementById('cookie-banner').style.display = 'none';
+      loadTrackingScripts();
+    } else {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  }
+</script>
+</body>
+</html>
