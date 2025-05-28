@@ -130,8 +130,61 @@
 
 <!-- Footer -->
 <footer>
-  <p>© 2025 FitVoorThuis. Alle rechten voorbehouden. | <a href="privacy.html" aria-current="page">Privacyverklaring</a> | <a href="contact.html">Contact</a></p>
+  <p>© 2025 FitVoorThuis. Alle rechten voorbehouden. | <a href="privacy.html" aria-current="page">Privacy & Cookies</a> | <a href="contact.html">Contact</a></p>
   <p style="color: #888; margin-top: 0.5rem;">Disclaimer: Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
 </footer>
+
+  <!-- Cookie banner HTML + CSS -->
+<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:15px;text-align:center;z-index:10000;">
+  <span>Deze website gebruikt cookies voor analyse en affiliate tracking. Klik op “Accepteren” om toestemming te geven.</span>
+  <button id="accept-cookies" style="margin-left:10px;padding:8px 15px;background:#4CAF50;color:#fff;border:none;cursor:pointer;">Accepteren</button>
+  <a href="/privacy" style="color:#4CAF50;margin-left:15px;text-decoration:underline;">Privacyverklaring</a>
+</div>
+
+<script>
+  // Functie om scripts pas te laden na toestemming
+  function loadTrackingScripts() {
+    // Voorbeeld: Google Analytics
+    var gaScript = document.createElement('script');
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X';
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    gaScript.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-XXXXXXX-X');
+    }
+
+    // Voeg hier je affiliate tracking scripts toe als nodig
+    // Bijvoorbeeld:
+    // var affScript = document.createElement('script');
+    // affScript.src = 'https://affiliatepartner.com/tracking.js';
+    // document.head.appendChild(affScript);
+  }
+
+  // Check of cookies al geaccepteerd zijn
+  function hasConsent() {
+    return localStorage.getItem('cookiesAccepted') === 'true';
+  }
+
+  // Banner verbergen en scripts laden bij acceptatie
+  document.getElementById('accept-cookies').onclick = function() {
+    localStorage.setItem('cookiesAccepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+    loadTrackingScripts();
+  }
+
+  // Bij pagina laden banner tonen of verbergen en scripts laden indien toestemming
+  window.onload = function() {
+    if (hasConsent()) {
+      document.getElementById('cookie-banner').style.display = 'none';
+      loadTrackingScripts();
+    } else {
+      document.getElementById('cookie-banner').style.display = 'block';
+    }
+  }
+</script>
 </body>
 </html>
