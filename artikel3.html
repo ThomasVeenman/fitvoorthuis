@@ -2,85 +2,93 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Verstelbare Dumbbells vs. Kettlebells; Wat is beter voor jou? </title>
-  <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FitVoorThuis – Dumbbells vs. Kettlebells: Wat is beter voor thuis?</title>
+  <meta name="description" content="Wat is beter voor jouw thuistraining: dumbbells of kettlebells? Wij vergelijken ze voor kracht, veelzijdigheid en ruimtegebruik." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FitVoorThuis – Dumbbells vs. Kettlebells" />
+  <meta property="og:description" content="Wat is beter voor jouw thuistraining: dumbbells of kettlebells? Wij vergelijken ze voor kracht, veelzijdigheid en ruimtegebruik." />
+  <meta property="og:image" content="hero.jpg" />
+  <meta property="og:url" content="https://www.fitvoorthuis.nl/artikel3.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
   <style>
-    .content-box {
-      background: #ffffff;
-      padding: 3rem 2rem;
-      border-radius: 0.75rem;
-      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
-      max-width: 850px;
-      margin: 4rem auto;
+    .dropdown { position: relative; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #000;
+      min-width: 250px;
+      z-index: 1000;
+      flex-direction: column;
+      padding: 0.5rem 0;
     }
-
-    .content-box h2, .content-box h3 {
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-      line-height: 1.3;
+    .dropdown-content a {
+      color: #fff;
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+      text-transform: none;
     }
-
-    .content-box p {
-      margin-bottom: 1.75rem;
-      font-size: 1.05rem;
-      color: #333;
+    .dropdown:hover .dropdown-content {
+      display: flex;
     }
-
-    .content-box ul {
-      margin-top: 1rem;
-      margin-bottom: 1.5rem;
-      padding-left: 1.5rem;
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
     }
-
-    .content-box li {
-      margin-bottom: 0.75rem;
-      font-size: 1.05rem;
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
     }
-
-    .content-box .highlight {
-      background-color: #f1f5f9;
-      padding: 1.75rem;
-      border-left: 5px solid var(--cta);
-      border-radius: 0.5rem;
-      margin: 3rem 0;
+    .mobile-nav {
+      display: none;
+      flex-direction: column;
+      background: #000;
+      padding: 1rem;
     }
-
-    .cta-button {
-      display: inline-block;
-      margin: 2rem 0;
+    .mobile-nav a {
+      color: white;
+      padding: 0.5rem 0;
+      text-transform: none;
     }
-
-    .product-image {
-      max-width: 250px;
-      height: auto;
-      display: block;
-      margin: 1.5rem auto;
-      border-radius: 12px;
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .mobile-nav.show { display: flex; }
     }
   </style>
+  <script>
+    function toggleMobileNav() {
+      const nav = document.getElementById('mobile-nav');
+      nav.classList.toggle('show');
+    }
+  </script>
 </head>
 <body>
-
-  <!-- Hero bovenaan -->
   <div class="hero">
     <div class="hero-overlay">
-      <h1>Verstelbare Dumbbells vs. Kettlebells; Wat is beter voor jou? </h1>
-      <p>Vergelijk de voordelen van verstelbare dumbbells en kettlebells.</p>
+      <h1>Dumbbells vs. Kettlebells</h1>
+      <p>Wat is beter voor jouw thuisgym?</p>
     </div>
   </div>
 
   <!-- Hamburger menu voor mobiel -->
   <div class="hamburger" onclick="toggleMobileNav()">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div></div><div></div><div></div>
   </div>
 
-  <!-- Desktop Navigatie -->
+  <!-- Navigatie -->
   <nav>
     <a href="index.html">Home</a>
-
     <div class="dropdown">
       <a href="#">Producten ▾</a>
       <div class="dropdown-content">
@@ -90,46 +98,43 @@
         <a href="loopbanden.html">Loopbanden</a>
         <a href="crosstrainers.html">Crosstrainers</a>
         <a href="hometrainers.html">Hometrainers</a>
-        <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
-        <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+        <a href="suspension-trainers.html">Suspension Trainers</a>
+        <a href="fitnessbanken.html">Fitnessbanken</a>
         <a href="pullup-bars.html">Pull-up Bars</a>
         <a href="yogamatten.html">Yogamatten</a>
         <a href="foamrollers.html">Foam Rollers</a>
         <a href="massageguns.html">Massage Guns</a>
       </div>
     </div>
-
     <div class="dropdown">
       <a href="#">Oefeningen ▾</a>
       <div class="dropdown-content">
         <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
         <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
         <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
-        <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+        <a href="oefeningen-cardio.html">Cardio met Loopband / Crosstrainer</a>
         <a href="oefeningen-core.html">Core & Stabiliteit</a>
-        <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+        <a href="oefeningen-herstel.html">Herstel & Mobiliteit</a>
         <a href="oefeningen-yoga.html">Yoga & Stretching</a>
       </div>
     </div>
-
     <div class="dropdown">
       <a href="#">Artikelen ▾</a>
       <div class="dropdown-content">
         <a href="artikel1.html">Waarom thuis trainen populairder is</a>
         <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
         <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
-        <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
-        <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
+        <a href="artikel4.html">Thuisgym met klein budget</a>
+        <a href="artikel5.html">Fit in 30 minuten</a>
       </div>
     </div>
-
     <a href="#uitleg">Over ons</a>
     <a href="#contact">Contact</a>
+  </nav>
 
   <!-- Mobiele Navigatie -->
   <div id="mobile-nav" class="mobile-nav">
     <a href="index.html">Home</a>
-
     <strong>Producten</strong>
     <a href="verstelbare-dumbbells.html">Verstelbare Dumbbells</a>
     <a href="weerstandsbanden.html">Weerstandsbanden</a>
@@ -137,140 +142,102 @@
     <a href="loopbanden.html">Loopbanden</a>
     <a href="crosstrainers.html">Crosstrainers</a>
     <a href="hometrainers.html">Hometrainers</a>
-    <a href="suspension-trainers.html">Suspension Trainers (TRX)</a>
-    <a href="fitnessbanken.html">Verstelbare Fitnessbank</a>
+    <a href="suspension-trainers.html">Suspension Trainers</a>
+    <a href="fitnessbanken.html">Fitnessbanken</a>
     <a href="pullup-bars.html">Pull-up Bars</a>
     <a href="yogamatten.html">Yogamatten</a>
     <a href="foamrollers.html">Foam Rollers</a>
     <a href="massageguns.html">Massage Guns</a>
-
     <strong>Oefeningen</strong>
     <a href="oefeningen-dumbbells.html">Krachttraining met Dumbbells</a>
     <a href="oefeningen-banden.html">Weerstandstraining met Banden</a>
     <a href="oefeningen-kettlebell.html">Full-body met Kettlebells</a>
-    <a href="oefeningen-cardio.html">Cardio op Loopband / Crosstrainer</a>
+    <a href="oefeningen-cardio.html">Cardio met Loopband / Crosstrainer</a>
     <a href="oefeningen-core.html">Core & Stabiliteit</a>
-    <a href="oefeningen-herstel.html">Herstel en Mobiliteit</a>
+    <a href="oefeningen-herstel.html">Herstel & Mobiliteit</a>
     <a href="oefeningen-yoga.html">Yoga & Stretching</a>
-
     <strong>Artikelen</strong>
     <a href="artikel1.html">Waarom thuis trainen populairder is</a>
     <a href="artikel2.html">Top 5 fitnessapparaten voor 2025</a>
     <a href="artikel3.html">Dumbbells vs. Kettlebells</a>
-    <a href="artikel4.html">Thuisgym inrichten met klein budget</a>
-    <a href="artikel5.html">Fit in 30 minuten: snelle workout</a>
-
+    <a href="artikel4.html">Thuisgym met klein budget</a>
+    <a href="artikel5.html">Fit in 30 minuten</a>
     <a href="#uitleg">Over ons</a>
     <a href="#contact">Contact</a>
   </div>
 
-
   <!-- Artikel -->
   <section class="content-box">
     <div class="artikel-inhoud">
-      <h1>Verstelbare Dumbbells vs. Kettlebells: Wat is beter voor jou?</h1>
+      <h1>Dumbbells vs. Kettlebells: Wat is beter voor thuisfitness?</h1>
+      <p>Thuis trainen is populairder dan ooit, maar wat is het beste hulpmiddel: dumbbells of kettlebells? Beide hebben hun eigen voordelen, maar er zijn duidelijke verschillen.</p>
 
-      <p>Wil jij starten met krachttraining thuis, maar twijfel je tussen verstelbare dumbbells en kettlebells? Beide zijn populair en veelzijdig, maar ze hebben ieder hun eigen voordelen. In dit artikel leggen we uit wat het verschil is en welke keuze het beste bij jouw doelen en training past.</p>
+      <h2>🏋️‍♂️ Veelzijdigheid</h2>
+      <p><strong>Dumbbells:</strong> Ideaal voor isolatie-oefeningen en progressieve belasting. Je kunt vrijwel elke spiergroep gericht trainen.</p>
+      <p><strong>Kettlebells:</strong> Perfect voor explosieve full-body bewegingen zoals swings, snatches en cleans. Minder geschikt voor strikte isolatie.</p>
 
-      <h2>Wat zijn verstelbare dumbbells?</h2>
-      <p>Verstelbare dumbbells zijn halters waarbij je het gewicht makkelijk kunt aanpassen. Dit betekent dat je één set dumbbells hebt die je kunt gebruiken voor verschillende oefeningen én gewichten. Super handig als je ruimte wilt besparen en toch wil blijven groeien in je krachttraining.</p>
-      <img src="verstelbare dumbbells.png" alt="Verstelbare Dumbbells" class="product-image">
+      <h2>💪 Kracht & Spieropbouw</h2>
+      <p><strong>Dumbbells:</strong> Bieden controle en balans, waardoor je gericht spiermassa opbouwt.</p>
+      <p><strong>Kettlebells:</strong> Activeren meer spiergroepen tegelijk, vooral core en grip, maar met minder focus op maximale hypertrofie.</p>
 
-      <h2>Wat zijn kettlebells?</h2>
-      <p>Kettlebells zijn die ronde gewichten met een handvat eraan. Je kunt er niet alleen mee tillen en drukken, maar ook mee zwaaien en slingeren. Daardoor train je kracht, conditie én coördinatie in één keer.</p>
-      <img src="kettlebell.png" alt="Kettlebell" class="product-image">
+      <h2>📦 Ruimte & Praktisch gebruik</h2>
+      <p><strong>Dumbbells:</strong> Hebben vaak meer ruimte nodig, tenzij je kiest voor verstelbare modellen.</p>
+      <p><strong>Kettlebells:</strong> Nemen weinig ruimte in en zijn snel inzetbaar, ideaal voor kleine woonruimtes.</p>
 
-      <h2>Voordelen van verstelbare dumbbells</h2>
-      <ul>
-        <li><strong>Veelzijdigheid:</strong> Je kunt vrijwel alle klassieke krachttrainingsbewegingen uitvoeren, zoals bicep curls, shoulder presses en chest presses.</li>
-        <li><strong>Compact:</strong> Ideaal voor thuis omdat je één set gebruikt in plaats van meerdere losse gewichten.</li>
-        <li><strong>Progressieve overload:</strong> Je kunt het gewicht precies afstellen op jouw niveau en steeds verhogen.</li>
-      </ul>
+      <h2>🏁 Conclusie</h2>
+      <p>Voor beginners en gerichte krachtopbouw zijn <strong>dumbbells</strong> vaak de beste keuze. Wil je dynamisch, functioneel en met hoge intensiteit trainen, dan zijn <strong>kettlebells</strong> uitstekend.</p>
 
-      <h2>Voordelen van kettlebells</h2>
-      <ul>
-        <li><strong>Full-body training:</strong> Door de dynamische bewegingen train je kracht, uithoudingsvermogen én stabiliteit tegelijk.</li>
-        <li><strong>Functionele kracht:</strong> Kettlebell oefeningen bootsen vaak natuurlijke bewegingen na, wat helpt bij dagelijkse activiteiten.</li>
-        <li><strong>Cardio en kracht:</strong> De combinatie zorgt ervoor dat je ook calorieën verbrandt en je conditie verbetert.</li>
-      </ul>
-
-      <h2>Wat past het beste bij jou?</h2>
-      <ul>
-        <li><strong>Ben je beginner en wil je gericht spierkracht opbouwen?</strong> Dan zijn verstelbare dumbbells een fijne keuze. Ze geven je de mogelijkheid om rustig te starten en je gewicht steeds te verhogen.</li>
-        <li><strong>Wil je een allround workout die kracht en cardio combineert?</strong> Dan zijn kettlebells top. Ze zijn ideaal als je wat meer uitdaging en variatie in je training zoekt.</li>
-        <li><strong>Heb je weinig ruimte?</strong> Verstelbare dumbbells zijn compact en nemen minder plek in dan een paar losse kettlebells.</li>
-      </ul>
-
-      <h2>Tip: combineer ze!</h2>
-      <p>Heb je de ruimte en het budget? Combineer dan beide! Zo profiteer je van de veelzijdigheid van dumbbells én de dynamiek van kettlebells. Wissel af voor de beste resultaten en voorkom dat je training saai wordt.</p>
-
-      <h2>Waar koop je ze?</h2>
-      <p>Wij helpen je graag op weg door de beste verstelbare dumbbells en kettlebells van bekende merken te adviseren. Via onze handige affiliate links vind je betrouwbare producten die goed scoren op kwaliteit en prijs. Zo kun jij met vertrouwen jouw thuisworkout starten.</p>
-
-      <h2>Conclusie</h2>
-      <p>Beide zijn top keuzes voor thuis trainen, maar wat het beste is hangt af van jouw doelen, niveau en voorkeur. Wil je gericht spierkracht ontwikkelen? Kies dan voor verstelbare dumbbells. Wil je kracht en cardio combineren? Ga voor kettlebells. Of combineer ze voor een complete workout!</p>
-
-      <p>Wil je meer tips en advies over fitnessapparatuur voor thuis? Blijf ons volgen voor de nieuwste reviews en koopgidsen.</p>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://www.fitvoorthuis.nl" class="cta-button">Bekijk alle aanbevolen producten</a>
+      </div>
     </div>
   </section>
 
-<!-- Footer -->
-<footer>
-  <p>© 2025 FitVoorThuis. Alle rechten voorbehouden. | <a href="privacy.html" aria-current="page">Privacy & Cookies</a> | <a href="contact.html">Contact</a></p>
-  <p style="color: #888; margin-top: 0.5rem;">Disclaimer: Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 FitVoorThuis. Alle rechten voorbehouden. | <a href="privacy.html">Privacy & Cookies</a> | <a href="contact.html">Contact</a></p>
+    <p style="color: #888; margin-top: 0.5rem;">Disclaimer: Deze site bevat affiliate links. Bij aankoop via onze links ontvangen wij mogelijk een commissie.</p>
+  </footer>
 
-  <!-- Cookie banner HTML + CSS -->
-<div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:15px;text-align:center;z-index:10000;">
-  <span>Deze website gebruikt cookies voor analyse en affiliate tracking. Klik op “Accepteren” om toestemming te geven.</span>
-  <button id="accept-cookies" style="margin-left:10px;padding:8px 15px;background:#4CAF50;color:#fff;border:none;cursor:pointer;">Accepteren</button>
-  <a href="/privacy" style="color:#4CAF50;margin-left:15px;text-decoration:underline;">Privacyverklaring</a>
-</div>
+  <!-- Cookie banner -->
+  <div id="cookie-banner" style="position:fixed;bottom:0;width:100%;background:#222;color:#fff;padding:15px;text-align:center;z-index:10000;">
+    <span>Deze website gebruikt cookies voor analyse en affiliate tracking. Klik op “Accepteren” om toestemming te geven.</span>
+    <button id="accept-cookies" style="margin-left:10px;padding:8px 15px;background:#4CAF50;color:#fff;border:none;cursor:pointer;">Accepteren</button>
+    <a href="/privacy" style="color:#4CAF50;margin-left:15px;text-decoration:underline;">Privacyverklaring</a>
+  </div>
+  <script>
+    function loadTrackingScripts() {
+      var gaScript = document.createElement('script');
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X';
+      gaScript.async = true;
+      document.head.appendChild(gaScript);
 
-<script>
-  // Functie om scripts pas te laden na toestemming
-  function loadTrackingScripts() {
-    // Voorbeeld: Google Analytics
-    var gaScript = document.createElement('script');
-    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXX-X';
-    gaScript.async = true;
-    document.head.appendChild(gaScript);
-
-    gaScript.onload = function() {
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-XXXXXXX-X');
+      gaScript.onload = function() {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXX-X');
+      }
     }
 
-    // Voeg hier je affiliate tracking scripts toe als nodig
-    // Bijvoorbeeld:
-    // var affScript = document.createElement('script');
-    // affScript.src = 'https://affiliatepartner.com/tracking.js';
-    // document.head.appendChild(affScript);
-  }
+    function hasConsent() {
+      return localStorage.getItem('cookiesAccepted') === 'true';
+    }
 
-  // Check of cookies al geaccepteerd zijn
-  function hasConsent() {
-    return localStorage.getItem('cookiesAccepted') === 'true';
-  }
-
-  // Banner verbergen en scripts laden bij acceptatie
-  document.getElementById('accept-cookies').onclick = function() {
-    localStorage.setItem('cookiesAccepted', 'true');
-    document.getElementById('cookie-banner').style.display = 'none';
-    loadTrackingScripts();
-  }
-
-  // Bij pagina laden banner tonen of verbergen en scripts laden indien toestemming
-  window.onload = function() {
-    if (hasConsent()) {
+    document.getElementById('accept-cookies').onclick = function() {
+      localStorage.setItem('cookiesAccepted', 'true');
       document.getElementById('cookie-banner').style.display = 'none';
       loadTrackingScripts();
-    } else {
-      document.getElementById('cookie-banner').style.display = 'block';
     }
-  }
-</script>
+
+    window.onload = function() {
+      if (hasConsent()) {
+        document.getElementById('cookie-banner').style.display = 'none';
+        loadTrackingScripts();
+      } else {
+        document.getElementById('cookie-banner').style.display = 'block';
+      }
+    }
+  </script>
 </body>
 </html>
